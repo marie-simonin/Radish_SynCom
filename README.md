@@ -3,7 +3,7 @@ Study performed at INRAE - IRHS : Script to reproduce bioinformatics and figures
 
 # Title: Transmission of synthetic seed bacterial communities to radish seedlings: impact on microbiota assembly and seedling phenotype
 
-#Figure 1 - Meta-analysis radish samples
+# Figure 1 - Meta-analysis radish samples
 
 ```{r}
 SV_gyrB<-read.table("Subset3-gyrB-MiSeq_table-FINAL-rarefied-transposed.txt", header=TRUE, check.names = FALSE, sep = "\t")
@@ -71,7 +71,7 @@ head(SV_gyrBprev_rel_taxo)
 
 
 
-##Plot Figure 1 Abundance-occupancy graph - gyrB - All phyla
+## Plot Figure 1 Abundance-occupancy graph - gyrB - All phyla
 ```{r}
 library(ggplot2)
 tax_colors <-  c('Xanthomonas campestris'='red','Plantibacter sp'='lightblue' ,'Stenotrophomonas rhizophila'='#ffa600', "Erwinia persicina"="#bc5090", "Enterobacter cancerogenus"="purple", "Paenibacillus sp"= "#ff7c43", "Pseudomonas fluorescens 1"="#488f31", "Pseudomonas fluorescens 2"="#b7d7a7", "Pseudomonas fluorescens 3"="#004900", "Pseudomonas fluorescens 4"="#aebd38", "Pantoea agglomerans"="#216fd2", "Pseudomonas viridiflava"= "#f9b0d3", "Other taxa"="lightgrey" )
@@ -90,7 +90,7 @@ dim(SV_gyrBprev_rel_taxo_strain)
 ```
 
 
-#Figure 2 Seedling bacterial biomass (CFU) for the different inoculation treatments
+# Figure 2 Seedling bacterial biomass (CFU) for the different inoculation treatments
 ```{r}
 pop=read.table("phenotype-pop-single-syncom.txt", header = T, sep = "\t")
 head(pop)
@@ -104,7 +104,7 @@ Figure2=ggplot(pop, aes(x=log_CFU, y=Condition, fill=Condition)) +
   geom_boxplot(outlier.shape = NA) + xlab("Log CFU by seedling")+ylab("Condition")+ theme_classic()+ theme(axis.title = element_text(color="black", size=12, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))	+ theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))+scale_fill_manual(values=c(colors))+facet_grid(Type~., scales  = "free", space = "free")+ theme(strip.text.y = element_text(size=8, face = "bold")) 
 Figure2
 ```
-##Stats Figure 2
+## Stats Figure 2
 
 ```{r}
 ###Fit the  model. 
@@ -146,9 +146,9 @@ multcomp::cld(warp.emm)
 
 
 
-#Metabarcoding figures
+# Metabarcoding figures
 
-##Import gyrB dataset
+## Import gyrB dataset
 ```{r}
 meta2 <- read.table("metadata_syncom_Anne_gyrB.txt", header=TRUE, check.names = FALSE, sep = "\t")
 SV_16S<-read.table("SynCom_Anne_gyrB_SV_tax_filtered.txt", header=TRUE, check.names = FALSE, sep = "\t")
@@ -221,7 +221,7 @@ NMDSsites=scores(NMDS, display="sites")
 SV_16S_use1=cbind(SV_16S_use1,NMDSsites)
 ```
 
-#Figure 3 panels A 
+# Figure 3 panels A 
 ```{r warning=FALSE}
 library(ggplot2)
 tax_colors_16S <-  c('Control'='#ffbb94',"6 strains"="ivory3", "8 strains"="ivory4", "12 strains"="black", "Control"="white")
@@ -232,7 +232,7 @@ color=Condition, shape=Sample_type))+geom_point(size=2.5)+theme_classic()+xlab("
 p1
 ```
 
-#Figure 3 panels D
+# Figure 3 panels D
 ```{r warning=FALSE}
 library(ggplot2)
 #Plot without controls
@@ -250,7 +250,7 @@ stressplot(NMDS2)
 NMDSsites=scores(NMDS2, display="sites")
 SV_16S_use1_nocontrols=cbind(SV_16S_use1_nocontrols,NMDSsites)
 ```
-##Permanova Fig 3D
+## Permanova Fig 3D
 ```{r warning=FALSE}
 # Permanova - Distance based multivariate analysis of variance
 ##Effect of SynCom and sample type
@@ -264,7 +264,7 @@ adonis2
 library(pairwiseAdonis)
 pairwise.adonis(matrix_use2, Alltreatments$Condition)
 ```
-##plot Figure 3D
+## plot Figure 3D
 ```{r warning=FALSE}
 p1=ggplot(data=SV_16S_use1_nocontrols, aes(NMDS1, NMDS2,
 color=Condition))+geom_point(size=3)+xlab("NMDS1")+ylab("NMDS2")+theme_classic()+facet_wrap(~Sample_type, scales ="free", ncol = 3)+scale_color_manual(values=tax_colors_16S)+ theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=10, face="bold"))+ theme(axis.text = element_text(color="black", size=8, face="bold"))+ labs(shape = "Sample Type", color = "Condition")+ theme(strip.text.x = element_text(size=10, face = "bold")) 
@@ -286,7 +286,7 @@ pairwise.adonis(matrix_use, Alltreatments$Condition)
 ```
 
 
-#Figure 3B Analysis beta dispersion on seeds and seedlings separately
+# Figure 3B Analysis beta dispersion on seeds and seedlings separately
 ```{r}
 #Seeds
 SV_16S_use1_seeds=subset(SV_16S_use1, Sample_type=="Seed")
@@ -321,7 +321,7 @@ p <-p + geom_boxplot()
 p <-p +theme_classic()+scale_fill_manual(values=tax_colors_16S)+ theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=11, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))+ labs( color = "Condition")+ xlab("Condition")+ylab("Beta-dispersion: Distance to centroid")+theme(legend.position = "none") +ggtitle("Seeds")+theme(plot.title = element_text(hjust = 0.5, face="bold"))
 p
 ```
-#Figure 3C
+# Figure 3C
 ```{r}
 #Seedlings
 SV_16S_use1_seedling=subset(SV_16S_use1, Sample_type=="Seedling")
@@ -372,7 +372,7 @@ physeq_gyrB = phyloseq(OTU2,META,TAXO_gyrB)
 physeq_gyrB
 ```
 
-##ASV of SynComs 
+#### ASV of SynComs 
 ```{r}
 library(tidyverse)
 dataframe_taxo_gyrB2 <- as.data.frame(taxo_gyrB2, raw.names = FALSE)
@@ -380,7 +380,7 @@ dataframe_taxo_gyrB2 <- rownames_to_column(dataframe_taxo_gyrB2, var = "ASV")%>%
 ASV_SC <- subset(dataframe_taxo_gyrB2, SynCom == "yes")
 ```
 
-##Colors used in graphs
+#### Colors used in graphs
 ```{r}
 tax_colors <-  c(
                  "Erwinia cancerogenus"="purple",
@@ -403,13 +403,7 @@ treatment_colors <-  c('Control'='#ffbb94',"6 strains"="ivory3", "8 strains"="iv
 ```
 
 
-##############################################
-##############################################
-##############################################
-
-
-
-# Figure 4B- Taxonomic profile of the inoculum, seeds and seedlings
+# Figure 4B Taxonomic profile of the inoculum, seeds and seedlings
 ```{r}
 library(ggplot2)
 #relative abundance
@@ -429,25 +423,6 @@ data_SC=merge(x=gyrB_abrel,y=meta,by.x="Sample_ID",by.y="Sample_ID",all.x = TRUE
 data_SC=merge(x=data_SC,y=dataframe_taxo_gyrB2,by.x="ASV",by.y="ASV",all.x = TRUE,all.y = TRUE, na.rm=TRUE)
 
 data_SC$Strains <- factor(data_SC$Strains, labels =  c("Other taxa", "Erwinia cancerogenus" ,       "Erwinia persicina"   ,        "Paenibacillus sp"        ,    "Pantoea agglomerans"       ,  "Plantibacter sp"         ,    "Pseudomonas fluorescens 1",   "Pseudomonas fluorescens 2" , "Pseudomonas fluorescens 3" ,  "Pseudomonas fluorescens 4"  , "Pseudomonas viridiflava"  ,   "Stenotrophomonas rhizophila", "Xanthomonas campestris"))
-
-
-## data verification graph
-# 
-# ggplot(data_SC, aes(x=Sample_ID, y = round(relative.abundance, 4)))+
-#   geom_col(aes(fill=Strains))+ 
-#   scale_fill_manual(values = tax_colors)+ 
-#   #facet_grid(~Sample_type, scales = "free", space = "free")+
-#   facet_grid(~Sample_type+Condition, scales = "free_x")+
-#   theme_classic()+  
-#   xlab("") + 
-#   ylab("Relative Abundance")+ 
-#   labs(fill="")+
-#   theme(axis.title.y = element_text(size=25, face = "bold"),
-#         plot.title = element_text(size=25, face="bold"),
-#         axis.text.x = element_blank(),
-#         axis.text.y = element_text(size = 25),
-#        # legend.text = element_blank(),
-#         strip.text = element_text(size = 20))
 
 
 #rename sample-type
@@ -556,12 +531,7 @@ ggsave("plot.png" , width = 40, height = 40, units = "cm")
 ```
 
 
-##############################################
-##############################################
-##############################################
-
-
-#Figure 4A - Alpha-diversity (Observed richness)
+# Figure 4A - Alpha-diversity (Observed richness)
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results="hide"}
 library(phyloseq)
 physeq_SC <- subset_taxa(physeq_gyrB, SynCom == "yes")
@@ -606,8 +576,8 @@ p_gyrB_ric
 ggsave("richness.png" , width = 30, height = 10, units = "cm")
 ```
 
-#Figure 5 - Transmission Seed-seedling
-### Prepare phyloseq object
+# Figure 5 - Transmission Seed-seedling
+
 ```{r}
 library(microbiome)
 ##Convert data as phyloseq object
@@ -616,7 +586,6 @@ meta=SV_16S_use1[c(1:10)]
 META=sample_data(meta)
 physeq_OTU = phyloseq(OTU2,META)
 physeq_OTU
-
 ```
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -661,7 +630,7 @@ dim(table_rel_abund_long_meta2)
 ```
 
 
-#Figure 5: slopes seed-seedling
+# Figure 5: slopes seed-seedling
 ```{r}
 ##Keep only inoculated ASVs
 table_rel_abund_long_meta2_strain=subset(table_rel_abund_long_meta2, SynCom=="yes")
@@ -708,7 +677,7 @@ tax_colors_16S <-  c('Control'='#ffbb94',"6 strains"="ivory3", "8 strains"="ivor
 plot_strains2=ggplot(seedVSseedlings_rich, aes(x = Sample_type, y = Relative_Abundance, color = Condition,group=Condition)) + geom_point() + geom_line() +  facet_wrap(~Strains)+theme_classic()+ylab("Relative abundance (%)")+xlab("Sample Type")+scale_color_manual(values=tax_colors_16S)+ scale_y_log10(labels = scales::percent_format(accuracy = 0.1))+ theme(strip.text.x = element_text(size=10,  face = "bold")) + theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=11, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))
 plot_strains2
 ```
-#Final Figure 5
+# Final Figure 5
 ```{r}
 #slop plot by strains - seed vs seedling - without controls - with standard errors
 seedVSseedlings_rich=grouped_stat_slope_rich[grouped_stat_slope_rich$Sample_type!="Inoculum",]
@@ -721,7 +690,7 @@ plot_strains2=ggplot(seedVSseedlings_rich, aes(x = Sample_type, y = Relative_Abu
 plot_strains2
 ```
 
-#Figure S1 - slope inoculum - seed
+# Figure S1 - slope inoculum - seed
 ```{r}
 #slop plot by strains - seed vs seedling - without controls - with standard errors
 inocVSseed_rich=grouped_stat_slope_rich[grouped_stat_slope_rich$Sample_type!="Seedling",]
@@ -734,7 +703,7 @@ plot_strains2=ggplot(inocVSseed_rich, aes(x = Sample_type, y = Relative_Abundanc
 plot_strains2
 ```
 
-#Figure 5B Ratio abundance Seedling / Seed
+# Figure 5B Ratio abundance Seedling / Seed
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 PS_run2_rich_no0=transform_sample_counts(physeq_OTU, function(x) x+1 )
 PS_run2_rich_no0relative=transform_sample_counts(PS_run2_rich_no0, function(x) x/sum(x)*100)
@@ -773,14 +742,14 @@ plot_strains_fitness
 ```
 
 
-#Figure 6 Effect on germination and seedling phenotypes
+# Figure 6 Effect on germination and seedling phenotypes
 ```{r}
 pheno=read.table("Phenotype_Syncom_strain.txt", header = T, sep = "\t")
 head(pheno)
 dim(pheno)
 
 ```
-##Graph Figure 6 phenotype
+## Graph Figure 6 phenotype
 ```{r}
 pheno$Phenotype<-ordered(pheno$Phenotype, levels=c("Normal", "Abnormal", "Non Germinated"))
 
@@ -792,9 +761,9 @@ Figure6=ggplot(pheno, aes(x=Condition, y=Frequency, fill=Phenotype)) +
 Figure6
 ```
 
-#Figure 7- SynCom effect on phenotype
+# Figure 7- SynCom effect on phenotype
 
-#Figure 7 effect of phenotype on microbiota structure
+# Figure 7 effect of phenotype on microbiota structure
 ```{r warning=FALSE}
 ##subset seedling to look at seedling type effect
 SV_16S_use1_seedling=subset(SV_16S_use1, Sample_type=="Seedling")
@@ -822,7 +791,7 @@ stressplot(NMDS2)
 NMDSsites2=scores(NMDS2, display="sites")
 SV_16S_use1_seedlings_nocontrols=cbind(SV_16S_use1_seedlings_nocontrols,NMDSsites2)
 ```
-#Figure 7A
+# Figure 7A
 ```{r warning=FALSE}
 library(ggplot2)
 SV_16S_use1_seedlings_nocontrols$Condition<-ordered(SV_16S_use1_seedlings_nocontrols$Condition, levels=c( "6 strains", "8 strains", "12 strains"))
@@ -831,7 +800,6 @@ color=Seedling_type))+geom_point(size=3)+xlab("NMDS1")+ylab("NMDS2")+facet_wrap(
   scale_color_manual(labels = c("Normal", "Abnormal"), values = c("#41AB5D", "#E69F00"))+ theme(legend.position = c(0.65, 0.3))
 p1
 ```
-
 
 ```{r}
 # Permanova - Distance based multivariate analysis of variance
@@ -848,7 +816,7 @@ pairwise.adonis(matrix_use2, Alltreatments$Condition)
 
 ```
 
-#Figure 7B rel abund strains in function of seedling type
+# Figure 7B rel abund strains in function of seedling type
 ```{r warning=FALSE}
 table_rel_abund_long_meta2_seedling=subset(table_rel_abund_long_meta2, Sample_type=="Seedling")
 table_rel_abund_long_meta2_seedling=table_rel_abund_long_meta2_seedling[table_rel_abund_long_meta2_seedling$Condition!="Control",]
@@ -857,7 +825,7 @@ library(ggplot2)
 Diversity_stat <- summarySE(table_rel_abund_long_meta2_seedling, measurevar="Relative_Abundance", groupvars=c("Seedling_type", "Condition", "Strains"), na.rm = TRUE)
 ```
 
-##Figure 7B rel abund strains in function of seedling type - just 12 strains SynCom
+## Figure 7B rel abund strains in function of seedling type - just 12 strains SynCom
 ```{r warning=FALSE}
 table_rel_abund_long_meta2_seedling12strains=table_rel_abund_long_meta2_seedling[table_rel_abund_long_meta2_seedling$Condition=="12 strains",]
 dim(table_rel_abund_long_meta2_seedling12strains)
