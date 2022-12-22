@@ -1,0 +1,460 @@
+Manip	Condition	Plant	Phenotype	Pop	log_CFU	Type
+SynCom	Control	1	Normal			Control
+SynCom	Control	2	Normal			Control
+SynCom	Control	3	Normal			Control
+SynCom	Control	4	Normal			Control
+SynCom	Control	5	Abnormal			Control
+SynCom	Control	6	Normal			Control
+SynCom	Control	7	Non Germinated			Control
+SynCom	Control	8	Normal			Control
+SynCom	Control	9	Normal			Control
+SynCom	Control	10	Normal			Control
+SynCom	Control	11	Normal			Control
+SynCom	Control	12	Normal			Control
+SynCom	Control	13	Normal			Control
+SynCom	Control	14	Normal			Control
+SynCom	Control	15	Normal			Control
+SynCom	6 strains	1	Abnormal	9.00E+06	7	SynCom
+SynCom	6 strains	2	Abnormal	1.00E+07	7.1	SynCom
+SynCom	6 strains	3	Abnormal	4.00E+05	5.6	SynCom
+SynCom	6 strains	4	Abnormal	4.00E+07	7.6	SynCom
+SynCom	6 strains	5	Normal	2.00E+07	7.2	SynCom
+SynCom	6 strains	6	Abnormal	3.00E+07	7.4	SynCom
+SynCom	6 strains	7	Normal	1.00E+07	7	SynCom
+SynCom	6 strains	8	Normal	2.00E+07	7.3	SynCom
+SynCom	6 strains	9	Normal	1.00E+07	7	SynCom
+SynCom	6 strains	10	Abnormal	6.00E+03	3.8	SynCom
+SynCom	6 strains	12	Abnormal	3.00E+07	7.5	SynCom
+SynCom	6 strains	13	Abnormal	4.00E+07	7.6	SynCom
+SynCom	6 strains	14	Abnormal	7.00E+04	4.8	SynCom
+SynCom	6 strains	15	Abnormal	1.00E+07	7.2	SynCom
+SynCom	6 strains	16	Abnormal	2.00E+07	7.3	SynCom
+SynCom	6 strains	17	Abnormal	8.00E+06	6.9	SynCom
+SynCom	6 strains	18	Abnormal	2.00E+07	7.3	SynCom
+SynCom	6 strains	19	Abnormal	2.00E+07	7.3	SynCom
+SynCom	6 strains	20	Abnormal	4.00E+07	7.6	SynCom
+SynCom	6 strains	21	Abnormal	2.00E+07	7.3	SynCom
+SynCom	6 strains	22	Abnormal	3.00E+07	7.5	SynCom
+SynCom	6 strains	23	Abnormal	1.00E+07	7	SynCom
+SynCom	6 strains	24	Abnormal	2.00E+07	7.4	SynCom
+SynCom	6 strains	25	Abnormal	4.00E+07	7.6	SynCom
+SynCom	6 strains	26	Non Germinated			SynCom
+SynCom	6 strains	27	Non Germinated			SynCom
+SynCom	6 strains	28	Non Germinated			SynCom
+SynCom	6 strains	29	Non Germinated			SynCom
+SynCom	6 strains	30	Non Germinated			SynCom
+SynCom	8 strains	1	Normal	1.00E+07	7.1	SynCom
+SynCom	8 strains	2	Normal	3.00E+07	7.5	SynCom
+SynCom	8 strains	3	Abnormal	5.00E+07	7.7	SynCom
+SynCom	8 strains	4	Abnormal	4.00E+07	7.6	SynCom
+SynCom	8 strains	5	Abnormal	9.00E+07	7.9	SynCom
+SynCom	8 strains	6	Normal	2.00E+07	7.4	SynCom
+SynCom	8 strains	7	Abnormal	2.00E+07	7.4	SynCom
+SynCom	8 strains	8	Abnormal	6.00E+07	7.8	SynCom
+SynCom	8 strains	9	Abnormal	2.00E+07	7.4	SynCom
+SynCom	8 strains	10	Normal	2.00E+07	7.3	SynCom
+SynCom	8 strains	11	Abnormal	4.00E+07	7.6	SynCom
+SynCom	8 strains	12	Abnormal	5.00E+06	6.7	SynCom
+SynCom	8 strains	13	Normal	1.00E+07	7.1	SynCom
+SynCom	8 strains	14	Abnormal	5.00E+07	7.7	SynCom
+SynCom	8 strains	15	Abnormal	2.00E+06	6.4	SynCom
+SynCom	8 strains	16	Abnormal	8.00E+07	7.9	SynCom
+SynCom	8 strains	17	Abnormal	7.00E+07	7.9	SynCom
+SynCom	8 strains	18	Abnormal	3.00E+07	7.5	SynCom
+SynCom	8 strains	19	Abnormal	7.00E+07	7.8	SynCom
+SynCom	8 strains	20	Abnormal	4.00E+03	3.6	SynCom
+SynCom	8 strains	21	Abnormal	5.00E+07	7.7	SynCom
+SynCom	8 strains	22	Abnormal	3.00E+07	7.5	SynCom
+SynCom	8 strains	23	Abnormal	3.00E+07	7.5	SynCom
+SynCom	8 strains	24	Abnormal	4.00E+07	7.6	SynCom
+SynCom	8 strains	25	Non Germinated			SynCom
+SynCom	8 strains	26	Non Germinated			SynCom
+SynCom	8 strains	27	Non Germinated			SynCom
+SynCom	8 strains	28	Non Germinated			SynCom
+SynCom	8 strains	29	Non Germinated			SynCom
+SynCom	8 strains	30	Non Germinated			SynCom
+SynCom	12 strains	1	Abnormal			SynCom
+SynCom	12 strains	2	Normal	1.00E+07	7	SynCom
+SynCom	12 strains	3	Abnormal	6.00E+07	7.8	SynCom
+SynCom	12 strains	4	Abnormal	3.00E+07	7.5	SynCom
+SynCom	12 strains	5	Normal	2.00E+08	8.4	SynCom
+SynCom	12 strains	6	Abnormal	5.00E+06	6.7	SynCom
+SynCom	12 strains	7	Normal	1.00E+07	7.1	SynCom
+SynCom	12 strains	8	Normal	3.00E+07	7.5	SynCom
+SynCom	12 strains	9	Abnormal	3.00E+07	7.4	SynCom
+SynCom	12 strains	10	Normal	7.00E+07	7.8	SynCom
+SynCom	12 strains	11	Normal	2.00E+07	7.3	SynCom
+SynCom	12 strains	12	Normal	5.00E+07	7.7	SynCom
+SynCom	12 strains	13	Normal	2.00E+08	8.3	SynCom
+SynCom	12 strains	14	Normal	1.00E+07	7.1	SynCom
+SynCom	12 strains	15	Abnormal	6.00E+07	7.8	SynCom
+SynCom	12 strains	16	Abnormal	6.00E+05	5.8	SynCom
+SynCom	12 strains	17	Normal	5.00E+06	6.7	SynCom
+SynCom	12 strains	18	Normal	3.00E+07	7.5	SynCom
+SynCom	12 strains	19	Normal	2.00E+07	7.2	SynCom
+SynCom	12 strains	20	Abnormal	4.00E+07	7.6	SynCom
+SynCom	12 strains	21	Abnormal	3.00E+07	7.4	SynCom
+SynCom	12 strains	22	Normal	3.00E+07	7.4	SynCom
+SynCom	12 strains	23	Abnormal	3.00E+07	7.5	SynCom
+SynCom	12 strains	24	Normal	8.00E+06	6.9	SynCom
+SynCom	12 strains	26	Non Germinated			SynCom
+SynCom	12 strains	27	Non Germinated			SynCom
+SynCom	12 strains	28	Non Germinated			SynCom
+SynCom	12 strains	29	Non Germinated			SynCom
+SynCom	12 strains	30	Non Germinated			SynCom
+CFBP13505	Pantoea agglomerans	E01		3.16E+05	5.5	Single Strain
+CFBP13505	Pantoea agglomerans	E02		1.24E+07	7.1	Single Strain
+CFBP13505	Pantoea agglomerans	E03		5.80E+06	6.8	Single Strain
+CFBP13505	Pantoea agglomerans	E04		1.64E+08	8.2	Single Strain
+CFBP13505	Pantoea agglomerans	E05		3.32E+07	7.5	Single Strain
+CFBP13505	Pantoea agglomerans	E06		4.04E+06	6.6	Single Strain
+CFBP13505	Pantoea agglomerans	E07		2.56E+05	5.4	Single Strain
+CFBP13505	Pantoea agglomerans	E08		1.48E+06	6.2	Single Strain
+CFBP13505	Pantoea agglomerans	E09		3.96E+06	6.6	Single Strain
+CFBP13505	Pantoea agglomerans	E10		3.72E+05	5.6	Single Strain
+CFBP13505	Pantoea agglomerans	E11		1.84E+06	6.3	Single Strain
+CFBP13505	Pantoea agglomerans	E12		4.40E+06	6.6	Single Strain
+CFBP13505	Pantoea agglomerans	E13		1.44E+05	5.2	Single Strain
+CFBP13505	Pantoea agglomerans	E14		2.24E+07	7.4	Single Strain
+CFBP13505	Pantoea agglomerans	E15		4.72E+06	6.7	Single Strain
+CFBP13505	Pantoea agglomerans	E16		2.48E+06	6.4	Single Strain
+CFBP13505	Pantoea agglomerans	E17		5.08E+06	6.7	Single Strain
+CFBP13505	Pantoea agglomerans	E18		3.60E+05	5.6	Single Strain
+CFBP13505	Pantoea agglomerans	E19		2.84E+06	6.5	Single Strain
+CFBP13505	Pantoea agglomerans	E20		2.68E+06	6.4	Single Strain
+CFBP13505	Pantoea agglomerans	E21		2.96E+06	6.5	Single Strain
+CFBP13505	Pantoea agglomerans	E22		2.76E+06	6.4	Single Strain
+CFBP13505	Pantoea agglomerans	E23		2.52E+06	6.4	Single Strain
+CFBP13505	Pantoea agglomerans	E24		2.80E+06	6.4	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E01		2.28E+06	6.8	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E02		2.88E+06	7.4	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E03		1.32E+06	7	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E04		8.40E+04	7.3	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E05		1.00E+06	6.2	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E06		6.00E+05	5.8	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E07		1.00E+07	7.1	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E08		4.00E+06	6.6	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E09		9.00E+06	7	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E10		2.00E+06	6.3	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E11		1.00E+06	6	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E12		6.00E+06	6.7	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E13		7.00E+06	6.8	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E14		2.00E+06	6.2	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E15		2.00E+06	6.3	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E16		7.00E+06	6.9	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E17		7.00E+06	6.8	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E18		2.00E+06	6.2	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E19		1.00E+07	7.1	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E20		1.00E+07	7.1	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E21		2.00E+06	6.3	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E22		5.00E+06	6.7	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E23		8.00E+06	6.9	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E24		8.00E+06	6.9	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E25		7.00E+06	6.8	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E26		5.00E+06	6.7	Single Strain
+CFBP13503	Stenotrophomonas rhizophila	E27		4.00E+06	6.6	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E01		1.00E+07	6.9	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E02		5.04E+06	7.1	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E03		3.28E+06	6.1	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E04		1.32E+07	6.6	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E05		1.48E+07	6.8	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E06		1.64E+06	6.3	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E07		6.68E+06	5.9	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E08		4.96E+05	6.9	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E09		1.56E+06	7.4	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E10		2.68E+06	8.1	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E11		1.52E+06	7.1	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E12		2.32E+06	7.3	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E13		2.60E+06	7.1	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E14		4.52E+05	6.5	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E15		3.32E+06	6.4	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E16		3.68E+06	6.5	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E17		4.72E+05	7.2	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E18		6.96E+06	6.6	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E19		2.28E+06	7.1	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E20		5.80E+06	7.3	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E21		6.24E+06	3	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E22		1.28E+07	3	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E23		3.88E+06	6.8	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E24		2.00E+03	7.4	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E25		6.68E+06	6.3	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E26		1.12E+05	5.9	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E27		2.72E+05	6.6	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E28		5.00E+07	7.7	Single Strain
+CFBP13506	Pseudomonas fluorescens 3	E29		5.00E+07	7.7	Single Strain
+CFBP13507	Pseudomonas viridiflava	E01		6.00E+07	7.7	Single Strain
+CFBP13507	Pseudomonas viridiflava	E02		4.00E+07	7.6	Single Strain
+CFBP13507	Pseudomonas viridiflava	E03		2.00E+07	7.3	Single Strain
+CFBP13507	Pseudomonas viridiflava	E04		4.00E+06	6.6	Single Strain
+CFBP13507	Pseudomonas viridiflava	E05		2.00E+07	7.3	Single Strain
+CFBP13507	Pseudomonas viridiflava	E06		7.00E+06	6.8	Single Strain
+CFBP13507	Pseudomonas viridiflava	E07		8.00E+03	3.9	Single Strain
+CFBP13507	Pseudomonas viridiflava	E08		8.00E+06	6.9	Single Strain
+CFBP13507	Pseudomonas viridiflava	E09		1.00E+07	7.1	Single Strain
+CFBP13507	Pseudomonas viridiflava	E10		9.00E+04	5	Single Strain
+CFBP13507	Pseudomonas viridiflava	E11		5.00E+07	7.7	Single Strain
+CFBP13507	Pseudomonas viridiflava	E12		2.00E+07	7.4	Single Strain
+CFBP13507	Pseudomonas viridiflava	E13		3.00E+07	7.5	Single Strain
+CFBP13507	Pseudomonas viridiflava	E14		5.00E+06	6.7	Single Strain
+CFBP13507	Pseudomonas viridiflava	E15		2.00E+06	6.2	Single Strain
+CFBP13507	Pseudomonas viridiflava	E16		1.00E+08	8.1	Single Strain
+CFBP13507	Pseudomonas viridiflava	E17		1.00E+07	7	Single Strain
+CFBP13507	Pseudomonas viridiflava	E18		5.00E+07	7.7	Single Strain
+CFBP13507	Pseudomonas viridiflava	E19		7.00E+07	7.8	Single Strain
+CFBP13507	Pseudomonas viridiflava	E20		5.00E+06	6.7	Single Strain
+CFBP13507	Pseudomonas viridiflava	E21		9.00E+07	8	Single Strain
+CFBP13507	Pseudomonas viridiflava	E22		1.00E+08	8.2	Single Strain
+CFBP13507	Pseudomonas viridiflava	E23		6.00E+07	7.7	Single Strain
+CFBP13507	Pseudomonas viridiflava	E24		4.00E+08	8.5	Single Strain
+CFBP13507	Pseudomonas viridiflava	E25		2.00E+07	7.3	Single Strain
+CFBP13507	Pseudomonas viridiflava	E26		7.00E+07	7.9	Single Strain
+CFBP13512	Paenibacillus sp	E01		2.00E+06	6.3	Single Strain
+CFBP13512	Paenibacillus sp	E02		6.00E+06	6.8	Single Strain
+CFBP13512	Paenibacillus sp	E03		6.00E+06	6.8	Single Strain
+CFBP13512	Paenibacillus sp	E04		6.00E+06	6.7	Single Strain
+CFBP13512	Paenibacillus sp	E05		2.00E+06	6.3	Single Strain
+CFBP13512	Paenibacillus sp	E06		1.00E+06	6.2	Single Strain
+CFBP13512	Paenibacillus sp	E07		1.00E+06	6.2	Single Strain
+CFBP13512	Paenibacillus sp	E08		2.00E+06	6.3	Single Strain
+CFBP13512	Paenibacillus sp	E09		4.00E+06	6.6	Single Strain
+CFBP13512	Paenibacillus sp	E10		1.00E+06	6.1	Single Strain
+CFBP13512	Paenibacillus sp	E11		9.00E+05	6	Single Strain
+CFBP13512	Paenibacillus sp	E12		2.00E+06	6.3	Single Strain
+CFBP13512	Paenibacillus sp	E13		8.00E+05	5.9	Single Strain
+CFBP13512	Paenibacillus sp	E14		5.00E+06	6.7	Single Strain
+CFBP13512	Paenibacillus sp	E15		7.00E+06	6.9	Single Strain
+CFBP13512	Paenibacillus sp	E16		3.00E+04	4.4	Single Strain
+CFBP13512	Paenibacillus sp	E17		6.00E+06	6.7	Single Strain
+CFBP13512	Paenibacillus sp	E18		6.00E+04	4.8	Single Strain
+CFBP13512	Paenibacillus sp	E19		2.00E+06	6.3	Single Strain
+CFBP13512	Paenibacillus sp	E20		1.00E+05	5	Single Strain
+CFBP13512	Paenibacillus sp	E21		6.00E+06	6.8	Single Strain
+CFBP13512	Paenibacillus sp	E22		5.00E+06	6.7	Single Strain
+CFBP13512	Paenibacillus sp	E23		1.00E+06	6.1	Single Strain
+CFBP13512	Paenibacillus sp	E24		1.00E+05	5.2	Single Strain
+CFBP13512	Paenibacillus sp	E25		6.00E+05	5.8	Single Strain
+CFBP13512	Paenibacillus sp	E26		2.00E+06	6.2	Single Strain
+CFBP13512	Paenibacillus sp	E27		1.00E+06	6.1	Single Strain
+CFBP13513	Plantibacter sp	E01		9.00E+06	7	Single Strain
+CFBP13513	Plantibacter sp	E02		3.00E+06	6.5	Single Strain
+CFBP13513	Plantibacter sp	E03		2.00E+06	6.4	Single Strain
+CFBP13513	Plantibacter sp	E04		1.00E+03	3	Single Strain
+CFBP13513	Plantibacter sp	E05		5.00E+06	6.7	Single Strain
+CFBP13513	Plantibacter sp	E06		6.00E+06	6.8	Single Strain
+CFBP13513	Plantibacter sp	E07		3.00E+05	5.4	Single Strain
+CFBP13513	Plantibacter sp	E08		9.00E+06	6.9	Single Strain
+CFBP13513	Plantibacter sp	E09		3.00E+05	5.4	Single Strain
+CFBP13513	Plantibacter sp	E10		2.00E+06	6.3	Single Strain
+CFBP13513	Plantibacter sp	E11		8.00E+06	6.9	Single Strain
+CFBP13513	Plantibacter sp	E12		4.00E+06	6.5	Single Strain
+CFBP13513	Plantibacter sp	E13		2.00E+06	6.2	Single Strain
+CFBP13513	Plantibacter sp	E14		1.00E+06	6.1	Single Strain
+CFBP13513	Plantibacter sp	E15		2.00E+06	6.2	Single Strain
+CFBP13513	Plantibacter sp	E16		1.00E+03	3	Single Strain
+CFBP13513	Plantibacter sp	E17		1.00E+03	3	Single Strain
+CFBP13513	Plantibacter sp	E18		3.00E+06	6.5	Single Strain
+CFBP13513	Plantibacter sp	E19		4.00E+06	6.6	Single Strain
+CFBP13513	Plantibacter sp	E20		1.00E+07	7.1	Single Strain
+CFBP13513	Plantibacter sp	E21		7.00E+05	5.8	Single Strain
+CFBP13513	Plantibacter sp	E22		2.00E+06	6.2	Single Strain
+CFBP13513	Plantibacter sp	E23		6.00E+05	5.8	Single Strain
+CFBP13513	Plantibacter sp	E24		1.00E+07	7	Single Strain
+CFBP13513	Plantibacter sp	E25		1.00E+07	7	Single Strain
+Xcc	Xanthomonas campestris	E01		2.00E+06	6.3	Single Strain
+Xcc	Xanthomonas campestris	E02		2.00E+06	6.4	Single Strain
+Xcc	Xanthomonas campestris	E03		2.00E+06	6.2	Single Strain
+Xcc	Xanthomonas campestris	E04		7.00E+06	6.9	Single Strain
+Xcc	Xanthomonas campestris	E05		7.00E+07	7.8	Single Strain
+Xcc	Xanthomonas campestris	E06		1.00E+07	7.1	Single Strain
+Xcc	Xanthomonas campestris	E07		3.00E+06	6.4	Single Strain
+Xcc	Xanthomonas campestris	E08		1.00E+07	7.1	Single Strain
+Xcc	Xanthomonas campestris	E09		7.00E+05	5.8	Single Strain
+Xcc	Xanthomonas campestris	E10		2.00E+06	6.2	Single Strain
+Xcc	Xanthomonas campestris	E11		8.00E+06	6.9	Single Strain
+Xcc	Xanthomonas campestris	E12		3.00E+06	6.4	Single Strain
+Xcc	Xanthomonas campestris	E13		1.00E+07	7.1	Single Strain
+Xcc	Xanthomonas campestris	E14		2.00E+06	6.4	Single Strain
+Xcc	Xanthomonas campestris	E15		2.00E+07	7.3	Single Strain
+Xcc	Xanthomonas campestris	E16		6.00E+07	7.8	Single Strain
+Xcc	Xanthomonas campestris	E17		2.00E+07	7.2	Single Strain
+Xcc	Xanthomonas campestris	E18		9.00E+06	7	Single Strain
+Xcc	Xanthomonas campestris	E19		2.00E+06	6.2	Single Strain
+Xcc	Xanthomonas campestris	E20		2.00E+07	7.3	Single Strain
+Xcc	Xanthomonas campestris	E21		2.00E+06	6.3	Single Strain
+Xcc	Xanthomonas campestris	E22		5.00E+05	5.7	Single Strain
+Xcc	Xanthomonas campestris	E23		2.00E+05	5.3	Single Strain
+Xcc	Xanthomonas campestris	E24		1.00E+07	7.1	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	1	Non Germinated			Single Strain
+CFBP13502	Pseudomonas fluorescens 4	2	Abnormal	1040000	6.017033339	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	3	Non Germinated			Single Strain
+CFBP13502	Pseudomonas fluorescens 4	4	Normal	21000000	7.322219295	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	5	Normal	30400000	7.482873584	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	6	Normal	22000000	7.342422681	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	7	Normal	28000000	7.447158031	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	8	Normal	12400000	7.093421685	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	9	Normal	7800000	6.892094603	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	10	Normal	31200000	7.494154594	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	11	Non Germinated			Single Strain
+CFBP13502	Pseudomonas fluorescens 4	12	Normal	8200000	6.913813852	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	13	Normal	13000000	7.113943352	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	14	Normal	1340000	6.127104798	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	15	Normal	13000000	7.113943352	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	18	Normal	11400000	7.056904851	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	19	Normal	60000000	7.77815125	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	20	Non Germinated			Single Strain
+CFBP13502	Pseudomonas fluorescens 4	21	Normal	24200000	7.383815366	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	22	Normal	880000	5.944482672	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	23	Normal	13200000	7.120573931	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	24	Normal	11000000	7.041392685	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	25	Non Germinated			Single Strain
+CFBP13502	Pseudomonas fluorescens 4	26	Normal	8000000	6.903089987	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	27	Normal	15800000	7.198657087	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	28	Non Germinated			Single Strain
+CFBP13502	Pseudomonas fluorescens 4	29	Abnormal	54000000	7.73239376	Single Strain
+CFBP13502	Pseudomonas fluorescens 4	30	Normal	17600000	7.245512668	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	1	Normal	4000000	6.602059991	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	2	Normal	10200000	7.008600172	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	3	Normal	17200000	7.235528447	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	4	Normal	1120000	6.049218023	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	5	Non Germinated			Single Strain
+CFBP13509	Pseudomonas fluorescens 1	6	Normal	7600000	6.880813592	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	7	Normal	8000000	6.903089987	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	8	Normal	9600000	6.982271233	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	9	Non Germinated			Single Strain
+CFBP13509	Pseudomonas fluorescens 1	10	Normal	6000000	6.77815125	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	11	Normal	42000000	7.62324929	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	12	Abnormal	162000000	8.209515015	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	13	Normal	11000000	7.041392685	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	14	Normal	1800000	6.255272505	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	15	Non Germinated			Single Strain
+CFBP13509	Pseudomonas fluorescens 1	16	Normal	7600000	6.880813592	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	17	Normal	9400000	6.973127854	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	18	Normal	17000000	7.230448921	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	19	Normal	9400000	6.973127854	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	20	Abnormal	720000	5.857332496	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	21	Normal	4000000	6.602059991	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	22	Normal	12000000	7.079181246	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	23	Normal	12600000	7.100370545	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	24	Normal	8800000	6.944482672	Single Strain
+CFBP13509	Pseudomonas fluorescens 1	25	Normal	1820000	6.260071388	Single Strain
+CFBP13511	Erwinia persicina	1	Normal	9200000	6.963787827	Single Strain
+CFBP13511	Erwinia persicina	2	Normal	11800000	7.071882007	Single Strain
+CFBP13511	Erwinia persicina	3	Normal	22000000	7.342422681	Single Strain
+CFBP13511	Erwinia persicina	4	Normal	21400000	7.330413773	Single Strain
+CFBP13511	Erwinia persicina	5	Non Germinated			Single Strain
+CFBP13511	Erwinia persicina	6	Normal	5800000	6.763427994	Single Strain
+CFBP13511	Erwinia persicina	7	Normal	6600000	6.819543936	Single Strain
+CFBP13511	Erwinia persicina	8	Normal	7400000	6.86923172	Single Strain
+CFBP13511	Erwinia persicina	9	Normal	12400000	7.093421685	Single Strain
+CFBP13511	Erwinia persicina	10	Normal	8600000	6.934498451	Single Strain
+CFBP13511	Erwinia persicina	11	Normal	15600000	7.193124598	Single Strain
+CFBP13511	Erwinia persicina	12	Normal	26800000	7.428134794	Single Strain
+CFBP13511	Erwinia persicina	13	Normal	600000000	8.77815125	Single Strain
+CFBP13511	Erwinia persicina	14	Abnormal	108000000	8.033423755	Single Strain
+CFBP13511	Erwinia persicina	15	Normal	7200000	6.857332496	Single Strain
+CFBP13511	Erwinia persicina	16	Normal	14200000	7.152288344	Single Strain
+CFBP13511	Erwinia persicina	17	Normal	2020000	6.305351369	Single Strain
+CFBP13511	Erwinia persicina	18	Normal	11400000	7.056904851	Single Strain
+CFBP13511	Erwinia persicina	19	Abnormal	52000000	7.716003344	Single Strain
+CFBP13511	Erwinia persicina	20	Normal	1540000	6.187520721	Single Strain
+CFBP13511	Erwinia persicina	21	Normal	2600000	6.414973348	Single Strain
+CFBP13511	Erwinia persicina	22	Normal	6400000	6.806179974	Single Strain
+CFBP13511	Erwinia persicina	23	Normal	2940000	6.46834733	Single Strain
+CFBP13511	Erwinia persicina	24	Normal	1320000	6.120573931	Single Strain
+CFBP13511	Erwinia persicina	25	Normal	3460000	6.539076099	Single Strain
+CFBP13511	Erwinia persicina	26	Normal	13400000	7.127104798	Single Strain
+CFBP13511	Erwinia persicina	27	Normal	12200000	7.086359831	Single Strain
+CFBP13511	Erwinia persicina	25	Non Germinated			Single Strain
+CFBP13511	Erwinia persicina	26	Normal	9000000	6.954242509	Single Strain
+CFBP13511	Erwinia persicina	27	Normal	10800000	7.033423755	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	1	Abnormal	124000000	8.093421685	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	2	Abnormal	540000	5.73239376	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	3	Non Germinated			Single Strain
+CFBP13528	Pseudomonas fluorescens 2	4	Normal	4400000	6.643452676	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	5	Normal	15800000	7.198657087	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	6	Normal	64000000	7.806179974	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	7	Normal	120000000	8.079181246	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	8	Normal	27400000	7.437750563	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	9	Non Germinated			Single Strain
+CFBP13528	Pseudomonas fluorescens 2	10	Normal	8800000	6.944482672	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	11	Normal	2480000	6.394451681	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	12	Normal	10600000	7.025305865	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	13	Normal	2280000	6.357934847	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	14	Normal	2480000	6.394451681	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	15	Abnormal	74000000	7.86923172	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	16	Normal	12600000	7.100370545	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	17	Normal	5000000	6.698970004	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	18	Normal	16000000	7.204119983	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	19	Normal	108000000	8.033423755	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	20	Normal	14000000	7.146128036	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	21	Normal	11000000	7.041392685	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	22	Normal	10000000	7	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	23	Normal	12000000	7.079181246	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	24	Normal	11000000	7.041392685	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	25	Normal	68000000	7.832508913	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	26	Abnormal	44000000	7.643452676	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	27	Normal	13000000	7.113943352	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	28	Non Germinated			Single Strain
+CFBP13528	Pseudomonas fluorescens 2	29	Normal	17400000	7.240549248	Single Strain
+CFBP13528	Pseudomonas fluorescens 2	30	Non Germinated			Single Strain
+CFBP13530	Enterobacter cancerogenus	1	Normal	4600000	6.662757832	Single Strain
+CFBP13530	Enterobacter cancerogenus	2	Normal	8200000	6.913813852	Single Strain
+CFBP13530	Enterobacter cancerogenus	3	Normal	1280000	6.10720997	Single Strain
+CFBP13530	Enterobacter cancerogenus	4	Normal	5400000	6.73239376	Single Strain
+CFBP13530	Enterobacter cancerogenus	5	Normal	4600000	6.662757832	Single Strain
+CFBP13530	Enterobacter cancerogenus	6	Normal	4000000	6.602059991	Single Strain
+CFBP13530	Enterobacter cancerogenus	7	Normal	1620000	6.209515015	Single Strain
+CFBP13530	Enterobacter cancerogenus	8	Abnormal	84000	4.924279286	Single Strain
+CFBP13530	Enterobacter cancerogenus	9	Normal	4000000	6.602059991	Single Strain
+CFBP13530	Enterobacter cancerogenus	10	Normal	3800000	6.579783597	Single Strain
+CFBP13530	Enterobacter cancerogenus	11	Normal	8600000	6.934498451	Single Strain
+CFBP13530	Enterobacter cancerogenus	12	Normal	9600000	6.982271233	Single Strain
+CFBP13530	Enterobacter cancerogenus	13	Normal	1560000	6.193124598	Single Strain
+CFBP13530	Enterobacter cancerogenus	14	Abnormal	5800000	6.763427994	Single Strain
+CFBP13530	Enterobacter cancerogenus	15	Normal	1820000	6.260071388	Single Strain
+CFBP13530	Enterobacter cancerogenus	16	Non Germinated			Single Strain
+CFBP13530	Enterobacter cancerogenus	17	Normal	5600000	6.748188027	Single Strain
+CFBP13530	Enterobacter cancerogenus	18	Normal	2120000	6.326335861	Single Strain
+CFBP13530	Enterobacter cancerogenus	19	Normal	2120000	6.326335861	Single Strain
+CFBP13530	Enterobacter cancerogenus	20	Normal	15800000	7.198657087	Single Strain
+CFBP13530	Enterobacter cancerogenus	21	Normal	1780000	6.250420002	Single Strain
+CFBP13530	Enterobacter cancerogenus	22	Non Germinated			Single Strain
+CFBP13530	Enterobacter cancerogenus	23	Normal	7800000	6.892094603	Single Strain
+CFBP13530	Enterobacter cancerogenus	24	Normal	20400000	7.309630167	Single Strain
+CFBP13530	Enterobacter cancerogenus	25	Normal	12600000	7.100370545	Single Strain
+CFBP13530	Enterobacter cancerogenus	26	Normal	5400000	6.73239376	Single Strain
+CFBP13530	Enterobacter cancerogenus	27	Abnormal	15600000	7.193124598	Single Strain
+CFBP13530	Enterobacter cancerogenus	28	Normal	2860000	6.456366033	Single Strain
+CFBP13530	Enterobacter cancerogenus	29	Normal	15600000	7.193124598	Single Strain
+CFBP13530	Enterobacter cancerogenus	30	Normal	1560000	6.193124598	Single Strain
+Strain	Control	E01		7.00E+03	3.9	Control
+Strain	Control	E02		2.00E+01	1.3	Control
+Strain	Control	E03		2.00E+01	1.3	Control
+Strain	Control	E04		2.00E+01	1.3	Control
+Strain	Control	E05		2.00E+01	1.3	Control
+Strain	Control	E06		2.00E+01	1.3	Control
+Strain	Control	E07		2.00E+01	1.3	Control
+Strain	Control	E08		1.00E+03	3	Control
+Strain	Control	E09		2.00E+01	1.3	Control
+Strain	Control	E10		2.00E+01	1.3	Control
+Strain	Control	E11		2.00E+01	1.3	Control
+Strain	Control	E12		3.00E+02	2.4	Control
+Strain	Control	E13		1.00E+02	2.1	Control
+Strain	Control	E14		2.00E+01	1.3	Control
+Strain	Control	E15		2.00E+01	1.3	Control
+Strain	Control	E16		2.00E+01	1.3	Control
+Strain	Control	E17		5.00E+04	4.7	Control
+Strain	Control	E18		2.00E+04	4.2	Control
+Strain	Control	E19		2.00E+01	1.3	Control
+Strain	Control	E20		2.00E+01	1.3	Control
+Strain	Control	E21		2.00E+01	1.3	Control
+Strain	Control	E22		2.00E+01	1.3	Control
+Strain	Control	E23		2.00E+01	1.3	Control
+Strain	Control	E24		2.00E+02	2.2	Control
+Strain	Control	E25		2.00E+01	1.3	Control
+Strain	Control	E26		2.00E+01	1.3	Control
+Strain	Control	E27		4.00E+01	1.6	Control
+Strain	Control	E28		2.00E+01	1.3	Control
+Strain	Control	E29		2.00E+01	1.3	Control
+Strain	Control	E30		4.00E+01	1.6	Control
+Strain	Control	E31		2.00E+01	1.3	Control
