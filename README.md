@@ -1,7 +1,7 @@
 # Radish_SynCom
 Study performed at INRAE - IRHS : Script to reproduce bioinformatics and figures of the article
 
-# Title: Transmission of synthetic seed bacterial communities to radish seedlings: impact on microbiota assembly and seedling phenotype
+# Title: Transmission of synthetic seed bacterial communities to radish seedlings: impact on microbiota assembly and plant phenotype
 
 # Figure 1 - Meta-analysis radish samples
 
