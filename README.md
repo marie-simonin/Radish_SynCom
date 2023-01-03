@@ -3,8 +3,122 @@ Study performed at INRAE - IRHS : Script to reproduce bioinformatics and figures
 
 # Title: Transmission of synthetic seed bacterial communities to radish seedlings: impact on microbiota assembly and plant phenotype
 
-# Figure 1 - Meta-analysis radish samples
+# Bioinformatic analysis on raw reads - Denoising with DADA2 and filtering
+### Raw Fastq reads are available on ENA accession number: PRJEB58635
 
+## removing primers with cutadapt
+for i in `cat group`; do cutadapt --discard-untrimmed -o $i.gyrB.R1.fq -p $i.gyrB.R2.fq -g MGNCCNGSNATGTAYATHGG -G ACNCCRTGNARDCCDCCNGA -e 0.1  -O 20 $i*L001_R1_001.fastq.gz $i*_L001_R2_001.fastq.gz; done
+
+ 
+# Denoising in R with DADA2
+```{r}
+library(dada2); packageVersion("dada2")
+
+list.files(path)
+
+fnFs <- sort(list.files(path, pattern="gyrB.R1.fq", full.names = TRUE))
+
+fnRs <- sort(list.files(path, pattern="gyrB.R2.fq", full.names = TRUE))
+
+sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)
+
+plotQualityProfile(fnFs[1:8]) #select 200 (run1)
+
+plotQualityProfile(fnRs[1:8]) #select 160 (run1)
+
+filtFs <- file.path(path, "filtered", paste0(sample.names, "_F_filt.fastq.gz"))
+
+filtRs <- file.path(path, "filtered", paste0(sample.names, "_R_filt.fastq.gz"))
+
+names(filtFs) <- sample.names
+
+names(filtRs) <- sample.names
+
+out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, truncLen=c(200,160),
+
+                     maxN=0, maxEE=c(1,1), truncQ=2, rm.phix=TRUE,
+
+                     compress=TRUE, multithread=TRUE) #
+
+head(out)
+
+errF <- learnErrors(filtFs, multithread=TRUE)
+
+errR <- learnErrors(filtRs, multithread=TRUE)
+
+plotErrors(errF, nominalQ=TRUE)
+
+dadaFs <- dada(filtFs, err=errF, multithread=TRUE) #without pooling or pseudo-pooling (no need to detect rare ASV)
+
+dadaRs <- dada(filtRs, err=errR, multithread=TRUE)
+
+dadaFs[[1]]
+
+mergers <- mergePairs(dadaFs, filtFs, dadaRs, filtRs, verbose=TRUE)
+
+seqtab <- makeSequenceTable(mergers)
+
+dim(seqtab)
+
+table(nchar(getSequences(seqtab)))
+```
+
+## Since gyrB is a protein-coding genes only triplets should be conserved (244-247-250-253-256-259-262-265-268)
+```{r}
+seqtab244 <- seqtab[,nchar(colnames(seqtab)) %in% 244]
+
+seqtab247 <- seqtab[,nchar(colnames(seqtab)) %in% 247]
+
+seqtab250 <- seqtab[,nchar(colnames(seqtab)) %in% 250]
+
+seqtab253 <- seqtab[,nchar(colnames(seqtab)) %in% 253]
+
+seqtab256 <- seqtab[,nchar(colnames(seqtab)) %in% 256]
+
+seqtab259 <- seqtab[,nchar(colnames(seqtab)) %in% 259]
+
+seqtab262 <- seqtab[,nchar(colnames(seqtab)) %in% 262]
+
+seqtab265 <- seqtab[,nchar(colnames(seqtab)) %in% 265]
+
+seqtab268 <- seqtab[,nchar(colnames(seqtab)) %in% 268]
+```
+
+## Merge all files
+```{r}
+seq.final <- cbind(seqtab244, seqtab247, seqtab250, seqtab253, seqtab256, seqtab259, seqtab262, seqtab265, seqtab268)
+
+dim(seq.final)
+
+sum(seq.final)/sum(seqtab)
+
+#Detect/Remove chimera
+
+seqtab.nochim <- removeBimeraDenovo(seq.final, method="consensus", multithread=TRUE, verbose=TRUE)
+
+dim(seqtab.nochim)
+
+sum(seqtab.nochim)/sum(seq.final)
+
+## Summary
+
+getN <- function(x) sum(getUniques(x))
+
+track <- cbind(out, sapply(dadaFs, getN), sapply(dadaRs, getN), sapply(mergers, getN), rowSums(seqtab.nochim))
+
+colnames(track) <- c("input", "filtered", "denoisedF", "denoisedR", "merged", "nonchim")
+
+rownames(track) <- sample.names
+
+head(track)
+```
+
+
+
+
+# Figures of the paper
+
+# Figure 1 - Meta-analysis radish samples
 ```{r}
 SV_gyrB<-read.table("Subset3-gyrB-MiSeq_table-FINAL-rarefied-transposed.txt", header=TRUE, check.names = FALSE, sep = "\t")
 head(SV_gyrB)
