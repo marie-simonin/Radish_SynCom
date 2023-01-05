@@ -797,10 +797,16 @@ plot_strains2
 seedVSseedlings_rich=grouped_stat_slope_rich[grouped_stat_slope_rich$Sample_type!="Inoculum",]
 seedVSseedlings_rich=seedVSseedlings_rich[seedVSseedlings_rich$Condition!="Control",]
 
+#remove rows of strains that have not been inoculated in SynComs
+seedVSseedlings_rich2seedling <- subset(seedVSseedlings_rich, Sample_type=="Seedling" & N>16)
+seedVSseedlings_rich2seed <- subset(seedVSseedlings_rich, Sample_type=="Seed")
+seedVSseedlings_rich_final=rbind(seedVSseedlings_rich2seed,seedVSseedlings_rich2seedling)
+
 #ordered by response type
-seedVSseedlings_rich$Strains<-ordered(seedVSseedlings_rich$Strains, levels=c('Stenotrophomonas rhizophila',"Pseudomonas viridiflava","Paenibacillus sp", "Pseudomonas fluorescens 1","Pantoea agglomerans", "Pseudomonas fluorescens 4","Erwinia persicina","Enterobacter cancerogenus", "Pseudomonas fluorescens 3",'Xanthomonas campestris','Plantibacter sp' , "Pseudomonas fluorescens 2"))
+seedVSseedlings_rich_final$Strains<-ordered(seedVSseedlings_rich_final$Strains, levels=c('Stenotrophomonas rhizophila',"Pseudomonas viridiflava","Paenibacillus sp", "Pseudomonas fluorescens 1","Pantoea agglomerans", "Pseudomonas fluorescens 4","Erwinia persicina","Enterobacter cancerogenus", "Pseudomonas fluorescens 3",'Xanthomonas campestris','Plantibacter sp' , "Pseudomonas fluorescens 2"))
 tax_colors_16S <-  c('Control'='#ffbb94',"6 strains"="ivory3", "8 strains"="ivory4", "12 strains"="black", "Control"="white")
-plot_strains2=ggplot(seedVSseedlings_rich, aes(x = Sample_type, y = Relative_Abundance, color = Condition,group=Condition)) + geom_point() + geom_line() +  facet_wrap(~Strains)+theme_classic()+ylab("Relative abundance (%)")+xlab("Sample Type")+scale_color_manual(values=tax_colors_16S)+ scale_y_log10(labels = scales::percent_format(accuracy = 0.1))+ theme(strip.text.x = element_text(size=10,  face = "bold")) + theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=11, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold")) + geom_errorbar(data=seedVSseedlings_rich, aes(x=Sample_type, ymin=Relative_Abundance-se, ymax=Relative_Abundance+se, color=Condition), width=.1, alpha=0.7) 
+seedVSseedlings_rich_final$Condition<-ordered(seedVSseedlings_rich_final$Condition, levels=c("6 strains", "8 strains", "12 strains"))
+plot_strains2=ggplot(seedVSseedlings_rich_final, aes(x = Sample_type, y = Relative_Abundance, color = Condition,group=Condition)) + geom_point() + geom_line() +  facet_wrap(~Strains)+theme_classic()+ylab("Relative abundance (%)")+xlab("Sample Type")+scale_color_manual(values=tax_colors_16S)+ scale_y_log10(labels = scales::percent_format(accuracy = 0.1))+ theme(strip.text.x = element_text(size=10,  face = "bold")) + theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=11, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold")) + geom_errorbar(data=seedVSseedlings_rich_final, aes(x=Sample_type, ymin=Relative_Abundance-se, ymax=Relative_Abundance+se, color=Condition), width=.1, alpha=0.7) 
 plot_strains2
 ```
 
@@ -845,6 +851,9 @@ ALL_data_seed_seedlings_rich=full_join(data_fitness5_seedling_stat,data_fitness5
 ALL_data_seed_seedlings_rich$fitness=ALL_data_seed_seedlings_rich$Relative_abundance_seedling/ALL_data_seed_seedlings_rich$Relative_abundance_seed
 names(ALL_data_seed_seedlings_rich)[names(ALL_data_seed_seedlings_rich) == "Strains.x"] <- "Strains"
 ALL_data_seed_seedlings_rich_nocontrol <- subset(ALL_data_seed_seedlings_rich, Condition != "Control")
+
+#remove rows of strains that have not been inoculated in SynComs
+ALL_data_seed_seedlings_rich_nocontrol <- subset(ALL_data_seed_seedlings_rich_nocontrol, sd.y != 0)
 
 #ALL_data_seed_seedlings_rich_meta=merge(taxo,ALL_data_seed_seedlings_rich,by="Strains",all.x = T)
 treatment_colors <-  c('Control'='#ffbb94',"6 strains"="ivory3", "8 strains"="ivory4", "12 strains"="black", "Control"="white")
