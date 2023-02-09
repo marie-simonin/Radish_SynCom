@@ -744,7 +744,7 @@ dim(table_rel_abund_long_meta2)
 ```
 
 
-# Figure 5: slopes seed-seedling
+# Figure 5: Transmission
 ```{r}
 ##Keep only inoculated ASVs
 table_rel_abund_long_meta2_strain=subset(table_rel_abund_long_meta2, SynCom=="yes")
@@ -754,44 +754,8 @@ dim(table_rel_abund_long_meta2_strain)
 library(Rmisc)
 library(ggplot2)
 grouped_stat_slope_rich=summarySE(table_rel_abund_long_meta2_strain, measurevar=c("Relative_Abundance"),groupvars=c("Condition","Sample_type", "Strains"), na.rm = TRUE)
-
-# all samples types
-tax_colors <-  c('Xanthomonas campestris'='red','Plantibacter sp'='lightblue' ,'Stenotrophomonas rhizophila'='#ffa600', "Erwinia persicina"="#bc5090", "Enterobacter cancerogenus"="purple", "Paenibacillus sp"= "#ff7c43", "Pseudomonas fluorescens 1"="#488f31", "Pseudomonas fluorescens 2"="#b7d7a7", "Pseudomonas fluorescens 3"="#004900", "Pseudomonas fluorescens 4"="#aebd38", "Pantoea agglomerans"="#216fd2", "Pseudomonas viridiflava"= "#f9b0d3", "Other taxa"="lightgrey" )
-plot_allsampletypes=ggplot(grouped_stat_slope_rich, aes(x = Sample_type, y = Relative_Abundance, color = Strains,group=Strains)) + geom_point() + geom_line() +  facet_wrap(~Condition)+theme_classic()+ylab("Relative abundance (%)")+xlab("Sample Type")+ggtitle("Slop plot all compartments")+scale_color_manual(values=tax_colors)+ scale_y_log10(labels = scales::percent_format(accuracy = 0.1))+ theme(strip.text.x = element_text(size=10,  face = "bold")) + theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=11, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))
-plot_allsampletypes
 ```
-
-```{r}
-#slop plot by strains
-tax_colors_16S <-  c('Control'='#ffbb94',"6 strains"="ivory3", "8 strains"="ivory4", "12 strains"="black", "Control"="white")
-
-plot_strains=ggplot(grouped_stat_slope_rich, aes(x = Sample_type, y = Relative_Abundance, color = Condition,group=Condition)) + geom_point() + geom_line() +  facet_wrap(~Strains)+theme_classic()+ylab("Relative abundance (%)")+xlab("Sample Type")+ggtitle("Slop plot all compartments")+scale_color_manual(values=tax_colors_16S)+ scale_y_log10(labels = scales::percent_format(accuracy = 0.1))+ theme(strip.text.x = element_text(size=10,  face = "bold")) + theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=11, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))
-plot_strains
-```
-
-```{r}
-#slop plot by strains - seed vs seedling
-seedVSseedlings_rich=grouped_stat_slope_rich[grouped_stat_slope_rich$Sample_type!="Inoculum",]
-
-#ordered by response type
-seedVSseedlings_rich$Strains<-ordered(seedVSseedlings_rich$Strains, levels=c('Stenotrophomonas rhizophila',"Pseudomonas viridiflava","Paenibacillus sp", "Pseudomonas fluorescens 1","Pantoea agglomerans", "Pseudomonas fluorescens 4","Erwinia persicina","Enterobacter cancerogenus", "Pseudomonas fluorescens 3",'Xanthomonas campestris','Plantibacter sp' , "Pseudomonas fluorescens 2"))
-tax_colors_16S <-  c('Control'='#ffbb94',"6 strains"="ivory3", "8 strains"="ivory4", "12 strains"="black", "Control"="white")
-plot_strains2=ggplot(seedVSseedlings_rich, aes(x = Sample_type, y = Relative_Abundance, color = Condition,group=Condition)) + geom_point() + geom_line() +  facet_wrap(~Strains)+theme_classic()+ylab("Relative abundance (%)")+xlab("Sample Type")+scale_color_manual(values=tax_colors_16S)+ scale_y_log10(labels = scales::percent_format(accuracy = 0.1))+ theme(strip.text.x = element_text(size=10,  face = "bold")) + theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=11, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))
-plot_strains2
-```
-
-```{r}
-#slop plot by strains - seed vs seedling - without controls
-seedVSseedlings_rich=grouped_stat_slope_rich[grouped_stat_slope_rich$Sample_type!="Inoculum",]
-seedVSseedlings_rich=seedVSseedlings_rich[seedVSseedlings_rich$Condition!="Control",]
-
-#ordered by response type
-seedVSseedlings_rich$Strains<-ordered(seedVSseedlings_rich$Strains, levels=c('Stenotrophomonas rhizophila',"Pseudomonas viridiflava","Paenibacillus sp", "Pseudomonas fluorescens 1","Pantoea agglomerans", "Pseudomonas fluorescens 4","Erwinia persicina","Enterobacter cancerogenus", "Pseudomonas fluorescens 3",'Xanthomonas campestris','Plantibacter sp' , "Pseudomonas fluorescens 2"))
-tax_colors_16S <-  c('Control'='#ffbb94',"6 strains"="ivory3", "8 strains"="ivory4", "12 strains"="black", "Control"="white")
-plot_strains2=ggplot(seedVSseedlings_rich, aes(x = Sample_type, y = Relative_Abundance, color = Condition,group=Condition)) + geom_point() + geom_line() +  facet_wrap(~Strains)+theme_classic()+ylab("Relative abundance (%)")+xlab("Sample Type")+scale_color_manual(values=tax_colors_16S)+ scale_y_log10(labels = scales::percent_format(accuracy = 0.1))+ theme(strip.text.x = element_text(size=10,  face = "bold")) + theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=11, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))
-plot_strains2
-```
-# Final Figure 5
+# Figure 5C
 ```{r}
 #slop plot by strains - seed vs seedling - without controls - with standard errors
 seedVSseedlings_rich=grouped_stat_slope_rich[grouped_stat_slope_rich$Sample_type!="Inoculum",]
@@ -810,7 +774,7 @@ plot_strains2=ggplot(seedVSseedlings_rich_final, aes(x = Sample_type, y = Relati
 plot_strains2
 ```
 
-# Figure S1 - slope inoculum - seed
+# Figure 5A - slope inoculum - seed
 ```{r}
 #slop plot by strains - seed vs seedling - without controls - with standard errors
 inocVSseed_rich=grouped_stat_slope_rich[grouped_stat_slope_rich$Sample_type!="Seedling",]
@@ -822,8 +786,47 @@ tax_colors_16S <-  c('Control'='#ffbb94',"6 strains"="ivory3", "8 strains"="ivor
 plot_strains2=ggplot(inocVSseed_rich, aes(x = Sample_type, y = Relative_Abundance, color = Condition,group=Condition)) + geom_point() + geom_line() +  facet_wrap(~Strains)+theme_classic()+ylab("Relative abundance (%)")+xlab("Sample Type")+scale_color_manual(values=tax_colors_16S)+ scale_y_log10(labels = scales::percent_format(accuracy = 0.1))+ theme(strip.text.x = element_text(size=10,  face = "bold")) + theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=11, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold")) + geom_errorbar(data=inocVSseed_rich, aes(x=Sample_type, ymin=Relative_Abundance-se, ymax=Relative_Abundance+se, color=Condition), width=.1, alpha=0.7) 
 plot_strains2
 ```
+# Figure 5B Ratio abundance Seed / Inoculum
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+PS_run2_rich_no0=transform_sample_counts(physeq_OTU, function(x) x+1 )
+PS_run2_rich_no0relative=transform_sample_counts(PS_run2_rich_no0, function(x) x/sum(x)*100)
+data_fitness=as.data.frame(otu_table(PS_run2_rich_no0relative))
+data_fitness2 <- tibble::rownames_to_column(data_fitness, "Sample_ID")
+data_fitness3=pivot_longer(data_fitness2,cols=colnames(data_fitness),names_to = "ASV")
+colnames(data_fitness3)=c("Sample_ID","ASV","Relative_abundance")
+data_fitness3=as.data.frame(data_fitness3)
+data_fitness4=left_join(data_fitness3, taxo,by="ASV")
+#data_fitness4$Strain_Figure_name = data_fitness4$Strain_Figure_name %>% replace_na('Native strain')
+#keep only strains of SynComs
+data_fitness4b <- subset(data_fitness4, SynCom == "yes")
+sample_data_fitness=as.data.frame(sample_data(physeq_OTU))
+sample_data_fitness$Sample_ID=row.names(sample_data_fitness)
+data_fitness5=left_join(data_fitness4b,sample_data_fitness,by="Sample_ID")
+#####
+data_fitness5_inoc=data_fitness5[data_fitness5$Sample_type=="Inoculum",]
+names(data_fitness5_inoc)[names(data_fitness5_inoc) == "Relative_abundance"] <- "Relative_abundance_inoc"
+data_fitness5_inoc_stat=summarySE(data_fitness5_inoc,measurevar=c("Relative_abundance_inoc"), groupvars=c("ASV","Condition","Strains"), na.rm = TRUE)
+data_fitness5_seed=data_fitness5[data_fitness5$Sample_type=="Seed",]
+names(data_fitness5_seed)[names(data_fitness5_seed) == "Relative_abundance"] <- "Relative_abundance_seed"
+data_fitness5_seed_stat=summarySE(data_fitness5_seed,measurevar=c("Relative_abundance_seed"), groupvars=c("ASV","Strains","Condition"), na.rm = TRUE)
+ALL_data_seed_inocs_rich=full_join(data_fitness5_inoc_stat,data_fitness5_seed_stat,by=c("ASV","Condition"))
 
-# Figure 5B Ratio abundance Seedling / Seed
+ALL_data_seed_inocs_rich$fitness=ALL_data_seed_inocs_rich$Relative_abundance_seed/ALL_data_seed_inocs_rich$Relative_abundance_inoc
+names(ALL_data_seed_inocs_rich)[names(ALL_data_seed_inocs_rich) == "Strains.x"] <- "Strains"
+ALL_data_seed_inocs_rich_nocontrol <- subset(ALL_data_seed_inocs_rich, Condition != "Control")
+#remove rows of strains that have not been inoculated in SynComs
+ALL_data_seed_inocs_rich_nocontrol <- subset(ALL_data_seed_inocs_rich_nocontrol, sd.y != 0)
+#ALL_data_seed_inocs_rich_meta=merge(taxo,ALL_data_seed_inocs_rich,by="Strains",all.x = T)
+treatment_colors <-  c('Control'='#ffbb94',"6 strains"="ivory3", "8 strains"="ivory4", "12 strains"="black", "Control"="white")
+ALL_data_seed_inocs_rich_nocontrol$Condition<-ordered(ALL_data_seed_inocs_rich_nocontrol$Condition, levels=c("6 strains", "8 strains", "12 strains"))
+
+plot_strains_fitness=ggplot(ALL_data_seed_inocs_rich_nocontrol,aes(x=log10(fitness),y=Strains,color=Condition))+geom_point(size=5)+scale_color_manual(values=treatment_colors)+theme_classic()+theme(text = element_text(size = 20))+guides(fill=guide_legend(ncol=1))+ylab("Strains")+xlab("log10(Relative abundance ratio Seed / Inoculum)")+geom_vline(xintercept = 0)
+plot_strains_fitness
+#write.csv(ALL_data_seed_inocs_rich_nocontrol, "SynCom_radis_strain_fitness_inoc.csv")
+```
+
+
+# Figure 5D Ratio abundance Seedling / Seed
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 PS_run2_rich_no0=transform_sample_counts(physeq_OTU, function(x) x+1 )
 PS_run2_rich_no0relative=transform_sample_counts(PS_run2_rich_no0, function(x) x/sum(x)*100)
@@ -874,13 +877,13 @@ dim(pheno)
 ```
 ## Graph Figure 6 phenotype
 ```{r}
-pheno$Phenotype<-ordered(pheno$Phenotype, levels=c("Normal", "Abnormal", "Non Germinated"))
+pheno$Phenotype<-ordered(pheno$Phenotype, levels=c("Non Germinated","Abnormal", "Normal"))
 
 pheno$Condition<-ordered(pheno$Condition, levels=c("6 strains", "8 strains", "12 strains","Enterobacter cancerogenus","Erwinia persicina","Paenibacillus sp", "Pantoea agglomerans","Plantibacter sp","Pseudomonas fluorescens 1", "Pseudomonas fluorescens 2","Pseudomonas fluorescens 3","Pseudomonas fluorescens 4","Pseudomonas viridiflava","Stenotrophomonas rhizophila","Xanthomonas campestris", "Control"))
 	
 library(ggplot2)
 Figure6=ggplot(pheno, aes(x=Condition, y=Frequency, fill=Phenotype)) + 
-  geom_bar(position = "stack", stat="identity") + ylab("Frequency of phenotype")+xlab("Condition")+scale_fill_manual(values=c("#41AB5D", "#E69F00", "darkred"))+ theme(axis.title = element_text(color="black", size=12, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))+ scale_y_continuous(labels = scales::percent_format(accuracy = 1))+ theme_classic()	+ theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))+ coord_flip()+ theme(axis.title = element_text(color="black", size=14, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))+facet_grid(Type~., scales  = "free", space = "free")+ theme(strip.text.y = element_text(size=9, face = "bold")) + theme(legend.position = c(-0.26, 0.09)) + theme(legend.background = element_rect(fill="white", size=0.5,linetype="solid", colour ="black"))
+  geom_bar(position = "stack", stat="identity") + ylab("Frequency of phenotype")+xlab("Condition")+scale_fill_manual(values=c("darkred","#E69F00","#41AB5D"))+ theme(axis.title = element_text(color="black", size=12, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))+ scale_y_continuous(labels = scales::percent_format(accuracy = 1))+ theme_classic()	+ theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))+ coord_flip()+ theme(axis.title = element_text(color="black", size=14, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))+facet_grid(Type~., scales  = "free", space = "free")+ theme(strip.text.y = element_text(size=9, face = "bold")) + theme(legend.position = c(-0.26, 0.09)) + theme(legend.background = element_rect(fill="white", size=0.5,linetype="solid", colour ="black"))
 Figure6
 ```
 
