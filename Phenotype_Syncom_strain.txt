@@ -1,49 +1,49 @@
-Condition	Phenotype	Frequency	Type
-12 strains	Normal	0.482758621	SynCom
-6 strains	Normal	0.137931034	SynCom
-8 strains	Normal	0.166666667	SynCom
-Control	Normal	0.866666667	Control
-Xanthomonas campestris	Normal	0.633333333	Single Strain
-Stenotrophomonas rhizophila	Normal	0.9	Single Strain
-Pantoea agglomerans	Normal	0.6	Single Strain
-Pseudomonas fluorescens 3	Normal	0.9	Single Strain
-Pseudomonas viridiflava	Normal	0.133333333	Single Strain
-Paenibacillus sp	Normal	0.3	Single Strain
-Plantibacter sp	Normal	0.866666667	Single Strain
-Pseudomonas fluorescens 4	Normal	0.833333333	Single Strain
-Pseudomonas fluorescens 1	Normal	0.866666667	Single Strain
-Erwinia persicina	Normal	0.8	Single Strain
-Pseudomonas fluorescens 2	Normal	0.733333333	Single Strain
-Enterobacter cancerogenus	Normal	0.714285714	Single Strain
-12 strains	Abnormal	0.344827586	SynCom
-6 strains	Abnormal	0.689655172	SynCom
-8 strains	Abnormal	0.633333333	SynCom
-Control	Abnormal	0.066666667	Control
-Xanthomonas campestris	Abnormal	0.166666667	Single Strain
-Stenotrophomonas rhizophila	Abnormal	0	Single Strain
-Pantoea agglomerans	Abnormal	0.2	Single Strain
-Pseudomonas fluorescens 3	Abnormal	0.066666667	Single Strain
-Pseudomonas viridiflava	Abnormal	0.733333333	Single Strain
-Paenibacillus sp	Abnormal	0.6	Single Strain
-Plantibacter sp	Abnormal	0.1	Single Strain
-Pseudomonas fluorescens 4	Abnormal	0.1	Single Strain
-Pseudomonas fluorescens 1	Abnormal	0.066666667	Single Strain
-Erwinia persicina	Abnormal	0.08	Single Strain
-Pseudomonas fluorescens 2	Abnormal	0.133333333	Single Strain
-Enterobacter cancerogenus	Abnormal	0.071428571	Single Strain
-12 strains	Non Germinated	0.172413793	SynCom
-6 strains	Non Germinated	0.172413793	SynCom
-8 strains	Non Germinated	0.2	SynCom
-Control	Non Germinated	0.066666667	Control
-Xanthomonas campestris	Non Germinated	0.2	Single Strain
-Stenotrophomonas rhizophila	Non Germinated	0.1	Single Strain
-Pantoea agglomerans	Non Germinated	0.2	Single Strain
-Pseudomonas fluorescens 3	Non Germinated	0.033333333	Single Strain
-Pseudomonas viridiflava	Non Germinated	0.133333333	Single Strain
-Paenibacillus sp	Non Germinated	0.1	Single Strain
-Plantibacter sp	Non Germinated	0.033333333	Single Strain
-Pseudomonas fluorescens 4	Non Germinated	0.066666667	Single Strain
-Pseudomonas fluorescens 1	Non Germinated	0.066666667	Single Strain
-Erwinia persicina	Non Germinated	0.12	Single Strain
-Pseudomonas fluorescens 2	Non Germinated	0.133333333	Single Strain
-Enterobacter cancerogenus	Non Germinated	0.214285714	Single Strain
+Condition	Phenotype	Frequency	Type	Count
+12 strains	Normal	0.482758621	SynCom	14
+6 strains	Normal	0.137931034	SynCom	4
+8 strains	Normal	0.166666667	SynCom	5
+Control	Normal	0.866666667	Control	26
+Xanthomonas campestris	Normal	0.633333333	Single Strain	19
+Stenotrophomonas rhizophila	Normal	0.9	Single Strain	27
+Pantoea agglomerans	Normal	0.6	Single Strain	18
+Pseudomonas fluorescens 3	Normal	0.9	Single Strain	27
+Pseudomonas viridiflava	Normal	0.133333333	Single Strain	4
+Paenibacillus sp	Normal	0.3	Single Strain	9
+Plantibacter sp	Normal	0.866666667	Single Strain	26
+Pseudomonas fluorescens 4	Normal	0.714285714	Single Strain	21
+Pseudomonas fluorescens 1	Normal	0.8	Single Strain	24
+Erwinia persicina	Normal	0.866666667	Single Strain	26
+Pseudomonas fluorescens 2	Normal	0.733333333	Single Strain	22
+Enterobacter cancerogenus	Normal	0.833333333	Single Strain	25
+12 strains	Abnormal	0.344827586	SynCom	10
+6 strains	Abnormal	0.689655172	SynCom	21
+8 strains	Abnormal	0.633333333	SynCom	19
+Control	Abnormal	0.066666667	Control	2
+Xanthomonas campestris	Abnormal	0.166666667	Single Strain	5
+Stenotrophomonas rhizophila	Abnormal	0	Single Strain	0
+Pantoea agglomerans	Abnormal	0.2	Single Strain	6
+Pseudomonas fluorescens 3	Abnormal	0.066666667	Single Strain	2
+Pseudomonas viridiflava	Abnormal	0.733333333	Single Strain	22
+Paenibacillus sp	Abnormal	0.6	Single Strain	18
+Plantibacter sp	Abnormal	0.1	Single Strain	3
+Pseudomonas fluorescens 4	Abnormal	0.071428571	Single Strain	2
+Pseudomonas fluorescens 1	Abnormal	0.08	Single Strain	2
+Erwinia persicina	Abnormal	0.066666667	Single Strain	2
+Pseudomonas fluorescens 2	Abnormal	0.133333333	Single Strain	4
+Enterobacter cancerogenus	Abnormal	0.1	Single Strain	3
+12 strains	Non Germinated	0.172413793	SynCom	5
+6 strains	Non Germinated	0.172413793	SynCom	5
+8 strains	Non Germinated	0.2	SynCom	6
+Control	Non Germinated	0.066666667	Control	2
+Xanthomonas campestris	Non Germinated	0.2	Single Strain	6
+Stenotrophomonas rhizophila	Non Germinated	0.1	Single Strain	3
+Pantoea agglomerans	Non Germinated	0.2	Single Strain	6
+Pseudomonas fluorescens 3	Non Germinated	0.033333333	Single Strain	1
+Pseudomonas viridiflava	Non Germinated	0.133333333	Single Strain	4
+Paenibacillus sp	Non Germinated	0.1	Single Strain	3
+Plantibacter sp	Non Germinated	0.033333333	Single Strain	1
+Pseudomonas fluorescens 4	Non Germinated	0.21428571	Single Strain	6
+Pseudomonas fluorescens 1	Non Germinated	0.12	Single Strain	4
+Erwinia persicina	Non Germinated	0.066666667	Single Strain	2
+Pseudomonas fluorescens 2	Non Germinated	0.133333333	Single Strain	4
+Enterobacter cancerogenus	Non Germinated	0.066666667	Single Strain	2

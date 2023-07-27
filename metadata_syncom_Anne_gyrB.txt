@@ -1,193 +1,196 @@
-Sample_ID	Treatment	Sample_type	Condition	Sample_prep	No_control	Low_sample	Seedling_type	sansTemoin_Xcc	Final
-gyrB-C11-G1	C11-G	Seed	12 strains	Macerat	Yes	No		Yes	Yes
-gyrB-C11-G2	C11-G	Seed	12 strains	Macerat	Yes	No		Yes	Yes
-gyrB-C11-G3	C11-G	Seed	12 strains	Macerat	Yes	No		Yes	Yes
-gyrB-C11-M1	C11-M	Inoculum	12 strains	Inoculum_post_inoc	Yes	No			
-gyrB-C11-M2	C11-M	Inoculum	12 strains	Inoculum_post_inoc	Yes	No			
-gyrB-C11-M3	C11-M	Inoculum	12 strains	Inoculum_post_inoc	Yes	No			
-gyrB-C111	C11	Inoculum	12 strains	Inoculum_pre_inoc	Yes	No			Yes
-gyrB-C112	C11	Inoculum	12 strains	Inoculum_pre_inoc	Yes	No			Yes
-gyrB-C113	C11	Inoculum	12 strains	Inoculum_pre_inoc	Yes	No			Yes
-gyrB-C5-G1	C5-G	Seed	6 strains	Macerat	Yes	No		Yes	Yes
-gyrB-C5-G2	C5-G	Seed	6 strains	Macerat	Yes	No		Yes	Yes
-gyrB-C5-G3	C5-G	Seed	6 strains	Macerat	Yes	No		Yes	Yes
-gyrB-C5-M1	C5-M	Inoculum	6 strains	Inoculum_post_inoc	Yes	No			
-gyrB-C5-M2	C5-M	Inoculum	6 strains	Inoculum_post_inoc	Yes	No			
-gyrB-C5-M3	C5-M	Inoculum	6 strains	Inoculum_post_inoc	Yes	No			
-gyrB-C51	C5	Inoculum	6 strains	Inoculum_pre_inoc	Yes	No			Yes
-gyrB-C52	C5	Inoculum	6 strains	Inoculum_pre_inoc	Yes	No			Yes
-gyrB-C53	C5	Inoculum	6 strains	Inoculum_pre_inoc	Yes	No			Yes
-gyrB-C7-G1	C7-G	Seed	8 strains	Macerat	Yes	No		Yes	Yes
-gyrB-C7-G2	C7-G	Seed	8 strains	Macerat	Yes	No		Yes	Yes
-gyrB-C7-G3	C7-G	Seed	8 strains	Macerat	Yes	No		Yes	Yes
-gyrB-C7-M1	C7-M	Inoculum	8 strains	Inoculum_post_inoc	Yes	No			
-gyrB-C7-M2	C7-M	Inoculum	8 strains	Inoculum_post_inoc	Yes	No			
-gyrB-C7-M3	C7-M	Inoculum	8 strains	Inoculum_post_inoc	Yes	No			
-gyrB-C71	C7	Inoculum	8 strains	Inoculum_pre_inoc	Yes	No			
-gyrB-C72	C7	Inoculum	8 strains	Inoculum_pre_inoc	Yes	No			Yes
-gyrB-C73	C7	Inoculum	8 strains	Inoculum_pre_inoc	Yes	No			Yes
-gyrB-M1	M	Seed	Control	Macerat	Yes	No			Yes
-gyrB-M2	M	Seed	Control	Macerat	Yes	No			Yes
-gyrB-M3	M	Seed	Control	Macerat	Yes	No			Yes
-gyrB-PC11-10	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-11	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-12	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-13	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-14	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-15	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC11-16	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC11-17	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-18	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-19	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-2	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-20	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC11-21	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC11-22	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-23	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC11-24	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-3	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC11-4	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC11-5	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-6	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC11-7	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-8	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC11-9	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-1	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-10	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-12	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-13	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-14	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-15	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-16	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-17	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-18	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-19	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-2	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-20	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-21	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-22	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-23	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-24	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-25	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-3	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-4	PC5	Seedling	6 strains	Total	Yes	No	PA		No
-gyrB-PC5-5	PC5	Seedling	6 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC5-6	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC5-7	PC5	Seedling	6 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC5-8	PC5	Seedling	6 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC5-9	PC5	Seedling	6 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC7-1	PC7	Seedling	8 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC7-10	PC7	Seedling	8 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC7-11	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-12	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-13	PC7	Seedling	8 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC7-14	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-15	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-16	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-17	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-18	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-19	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-2	PC7	Seedling	8 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC7-20	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-21	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-22	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-23	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-24	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-3	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-4	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-5	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-6	PC7	Seedling	8 strains	Total	Yes	No	PN	Yes	Yes
-gyrB-PC7-7	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-8	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PC7-9	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes
-gyrB-PT1	PT	Seedling	Control	Total	Yes	yes			No
-gyrB-PT10	PT	Seedling	Control	Total	Yes	No	PN		Yes
-gyrB-PT11	PT	Seedling	Control	Total	Yes	No	PN		Yes
-gyrB-PT12	PT	Seedling	Control	Total	Yes	No	PN		Yes
-gyrB-PT13	PT	Seedling	Control	Total	Yes	No	PN		Yes
-gyrB-PT14	PT	Seedling	Control	Total	Yes	yes			No
-gyrB-PT15	PT	Seedling	Control	Total	Yes	yes			No
-gyrB-PT2	PT	Seedling	Control	Total	Yes	No	PN		Yes
-gyrB-PT3	PT	Seedling	Control	Total	Yes	No	PN		Yes
-gyrB-PT4	PT	Seedling	Control	Total	Yes	No	PN		Yes
-gyrB-PT5	PT	Seedling	Control	Total	Yes	No	PA		Yes
-gyrB-PT6	PT	Seedling	Control	Total	Yes	No	PN		Yes
-gyrB-PT8	PT	Seedling	Control	Total	Yes	No	PN		Yes
-gyrB-PT9	PT	Seedling	Control	Total	Yes	No	PN		Yes
-gyrB-PX-1	PX	Seedling	Xcc	Total	Yes	No	PA		
-gyrB-PX-10	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-12	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-13	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-14	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-15	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-16	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-18	PX	Seedling	Xcc	Total	Yes	No	PA		
-gyrB-PX-19	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-2	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-20	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-21	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-22	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-23	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-24	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-26	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-27	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-28	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-29	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-3	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-30	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-4	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-5	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-6	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-7	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-8	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-PX-9	PX	Seedling	Xcc	Total	Yes	No	PN		
-gyrB-T-M1	T-M	Inoculum	Control	Inoculum_post_inoc	Yes	No			
-gyrB-T-M2	T-M	Inoculum	Control	Inoculum_post_inoc	Yes	No			
-gyrB-T-M3	T-M	Inoculum	Control	Inoculum_post_inoc	Yes	No			
-gyrB-T-T10	T-T	Seedling	Control	Tapis	Yes	No	PN		
-gyrB-T-T12	T-T	Seedling	Control	Tapis	Yes	No	PN		
-gyrB-T-T13	T-T	Seedling	Control	Tapis	Yes	No	PN		
-gyrB-T-T5	T-T	Seedling	Control	Tapis	Yes	No	PA		
-gyrB-T-T6	T-T	Seedling	Control	Tapis	Yes	No	PN		
-gyrB-T1	T	Controls	Controls	MgSO4	No	yes			
-gyrB-T2	T	Controls	Controls	MgSO4	No	yes			
-gyrB-T3	T	Controls	Controls	MgSO4	No	No			
-gyrB-TC11-12	TC11	Seedling	12 strains	Tapis	Yes	No	PN		
-gyrB-TC11-16	TC11	Seedling	12 strains	Tapis	Yes	No	PA		
-gyrB-TC11-2	TC11	Seedling	12 strains	Tapis	Yes	No	PN		
-gyrB-TC11-24	TC11	Seedling	12 strains	Tapis	Yes	No	PN		
-gyrB-TC11-6	TC11	Seedling	12 strains	Tapis	Yes	No	PA		
-gyrB-TC11-9	TC11	Seedling	12 strains	Tapis	Yes	No	PA		
-gyrB-TC5-14	TC5	Seedling	6 strains	Tapis	Yes	No	PA		
-gyrB-TC5-17	TC5	Seedling	6 strains	Tapis	Yes	No	PA		
-gyrB-TC5-20	TC5	Seedling	6 strains	Tapis	Yes	No	PA		
-gyrB-TC5-22	TC5	Seedling	6 strains	Tapis	Yes	No	PA		
-gyrB-TC5-5	TC5	Seedling	6 strains	Tapis	Yes	No	PN		
-gyrB-TC5-9	TC5	Seedling	6 strains	Tapis	Yes	No	PN		
-gyrB-TC7-11	TC7	Seedling	8 strains	Tapis	Yes	No	PA		
-gyrB-TC7-15	TC7	Seedling	8 strains	Tapis	Yes	No	PA		
-gyrB-TC7-23	TC7	Seedling	8 strains	Tapis	Yes	No	PA		
-gyrB-TC7-24	TC7	Seedling	8 strains	Tapis	Yes	No	PA		
-gyrB-TC7-3	TC7	Seedling	8 strains	Tapis	Yes	No	PA		
-gyrB-TC7-8	TC7	Seedling	8 strains	Tapis	Yes	No	PA		
-gyrB-TnegExtp1	TnegExtp	Controls	Controls	TnegExtp	No	yes			
-gyrB-TnegExtp2	TnegExtp	Controls	Controls	TnegExtp	No	No			
-gyrB-TnegPCRp1	TnegPCRp	Controls	Controls	TnegPCRp	No	yes			
-gyrB-TnegPCRp2	TnegPCRp	Controls	Controls	TnegPCRp	No	No			
-gyrB-TposPCRp1	TposPCRp	Controls	Controls	TposPCRp	No	No			
-gyrB-TposPCRp2	TposPCRp	Controls	Controls	TposPCRp	No	No			
-gyrB-TX-15	TX	Seedling	Xcc	Tapis	Yes	No	PN		
-gyrB-TX-20	TX	Seedling	Xcc	Tapis	Yes	No	PN		
-gyrB-TX-24	TX	Seedling	Xcc	Tapis	Yes	No	PN		
-gyrB-TX-30	TX	Seedling	Xcc	Tapis	Yes	No	PN		
-gyrB-TX-5	TX	Seedling	Xcc	Tapis	Yes	No	PN		
-gyrB-TX-9	TX	Seedling	Xcc	Tapis	Yes	No	PN		
-gyrB-X-G1	X-G	Seed	Xcc	Macerat	Yes	No			
-gyrB-X-G2	X-G	Seed	Xcc	Macerat	Yes	No			
-gyrB-X-G3	X-G	Seed	Xcc	Macerat	Yes	No			
-gyrB-X-M1	X-M	Inoculum	Xcc	Inoculum_post_inoc	Yes	No			
-gyrB-X-M2	X-M	Inoculum	Xcc	Inoculum_post_inoc	Yes	No			
-gyrB-X-M3	X-M	Inoculum	Xcc	Inoculum_post_inoc	Yes	No			
-gyrB-Xcc1	Xcc	Inoculum	Xcc	Inoculum_pre_inoc	Yes	No			
-gyrB-Xcc2	Xcc	Inoculum	Xcc	Inoculum_pre_inoc	Yes	No			
-gyrB-Xcc3	Xcc	Inoculum	Xcc	Inoculum_pre_inoc	Yes	No			
+Sample_ID	Treatment	Sample_type	Condition	Sample_prep	No_control	Low_sample	Seedling_type	sansTemoin_Xcc	Final	Native	Surface_Sterilization
+gyrB-T1	T	Controls	Controls	MgSO4	No	yes					
+gyrB-T2	T	Controls	Controls	MgSO4	No	yes					
+gyrB-T3	T	Controls	Controls	MgSO4	No	No					
+gyrB-TnegExtp1	TnegExtp	Controls	Controls	TnegExtp	No	yes					
+gyrB-TnegExtp2	TnegExtp	Controls	Controls	TnegExtp	No	No					
+gyrB-TnegPCRp1	TnegPCRp	Controls	Controls	TnegPCRp	No	yes					
+gyrB-TnegPCRp2	TnegPCRp	Controls	Controls	TnegPCRp	No	No					
+gyrB-TposPCRp1	TposPCRp	Controls	Controls	TposPCRp	No	No					
+gyrB-TposPCRp2	TposPCRp	Controls	Controls	TposPCRp	No	No					
+gyrB-C11-M1	C11-M	Inoculum	12 strains	Inoculum_post_inoc	Yes	No					
+gyrB-C11-M2	C11-M	Inoculum	12 strains	Inoculum_post_inoc	Yes	No					
+gyrB-C11-M3	C11-M	Inoculum	12 strains	Inoculum_post_inoc	Yes	No					
+gyrB-C111	C11	Inoculum	12 strains	Inoculum_pre_inoc	Yes	No			Yes		
+gyrB-C112	C11	Inoculum	12 strains	Inoculum_pre_inoc	Yes	No			Yes		
+gyrB-C113	C11	Inoculum	12 strains	Inoculum_pre_inoc	Yes	No			Yes		
+gyrB-C5-M1	C5-M	Inoculum	6 strains	Inoculum_post_inoc	Yes	No					
+gyrB-C5-M2	C5-M	Inoculum	6 strains	Inoculum_post_inoc	Yes	No					
+gyrB-C5-M3	C5-M	Inoculum	6 strains	Inoculum_post_inoc	Yes	No					
+gyrB-C51	C5	Inoculum	6 strains	Inoculum_pre_inoc	Yes	No			Yes		
+gyrB-C52	C5	Inoculum	6 strains	Inoculum_pre_inoc	Yes	No			Yes		
+gyrB-C53	C5	Inoculum	6 strains	Inoculum_pre_inoc	Yes	No			Yes		
+gyrB-C7-M1	C7-M	Inoculum	8 strains	Inoculum_post_inoc	Yes	No					
+gyrB-C7-M2	C7-M	Inoculum	8 strains	Inoculum_post_inoc	Yes	No					
+gyrB-C7-M3	C7-M	Inoculum	8 strains	Inoculum_post_inoc	Yes	No					
+gyrB-C71	C7	Inoculum	8 strains	Inoculum_pre_inoc	Yes	No					
+gyrB-C72	C7	Inoculum	8 strains	Inoculum_pre_inoc	Yes	No			Yes		
+gyrB-C73	C7	Inoculum	8 strains	Inoculum_pre_inoc	Yes	No			Yes		
+gyrB-T-M1	T-M	Inoculum	Control	Inoculum_post_inoc	Yes	No					
+gyrB-T-M2	T-M	Inoculum	Control	Inoculum_post_inoc	Yes	No					
+gyrB-T-M3	T-M	Inoculum	Control	Inoculum_post_inoc	Yes	No					
+gyrB-X-M1	X-M	Inoculum	Xcc	Inoculum_post_inoc	Yes	No					
+gyrB-X-M2	X-M	Inoculum	Xcc	Inoculum_post_inoc	Yes	No					
+gyrB-X-M3	X-M	Inoculum	Xcc	Inoculum_post_inoc	Yes	No					
+gyrB-Xcc1	Xcc	Inoculum	Xcc	Inoculum_pre_inoc	Yes	No					
+gyrB-Xcc2	Xcc	Inoculum	Xcc	Inoculum_pre_inoc	Yes	No					
+gyrB-Xcc3	Xcc	Inoculum	Xcc	Inoculum_pre_inoc	Yes	No					
+Native-seed-1		Native Seed	Control							Yes	No
+Native-seed-2		Native Seed	Control							Yes	No
+Native-seed-3		Native Seed	Control							Yes	No
+gyrB-C11-G1	C11-G	Seed	12 strains	Macerat	Yes	No		Yes	Yes		
+gyrB-C11-G2	C11-G	Seed	12 strains	Macerat	Yes	No		Yes	Yes		
+gyrB-C11-G3	C11-G	Seed	12 strains	Macerat	Yes	No		Yes	Yes		
+gyrB-C5-G1	C5-G	Seed	6 strains	Macerat	Yes	No		Yes	Yes		
+gyrB-C5-G2	C5-G	Seed	6 strains	Macerat	Yes	No		Yes	Yes		
+gyrB-C5-G3	C5-G	Seed	6 strains	Macerat	Yes	No		Yes	Yes		
+gyrB-C7-G1	C7-G	Seed	8 strains	Macerat	Yes	No		Yes	Yes		
+gyrB-C7-G2	C7-G	Seed	8 strains	Macerat	Yes	No		Yes	Yes		
+gyrB-C7-G3	C7-G	Seed	8 strains	Macerat	Yes	No		Yes	Yes		
+gyrB-M1	M	Seed	Control	Macerat	Yes	No			Yes	Yes	Yes
+gyrB-M2	M	Seed	Control	Macerat	Yes	No			Yes	Yes	Yes
+gyrB-M3	M	Seed	Control	Macerat	Yes	No			Yes	Yes	Yes
+gyrB-X-G1	X-G	Seed	Xcc	Macerat	Yes	No					
+gyrB-X-G2	X-G	Seed	Xcc	Macerat	Yes	No					
+gyrB-X-G3	X-G	Seed	Xcc	Macerat	Yes	No					
+gyrB-PC11-10	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-11	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-12	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-13	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-14	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-15	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC11-16	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC11-17	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-18	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-19	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-2	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-20	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC11-21	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC11-22	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-23	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC11-24	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-3	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC11-4	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC11-5	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-6	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC11-7	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-8	PC11	Seedling	12 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC11-9	PC11	Seedling	12 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-1	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-10	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-12	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-13	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-14	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-15	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-16	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-17	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-18	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-19	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-2	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-20	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-21	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-22	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-23	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-24	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-25	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-3	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-4	PC5	Seedling	6 strains	Total	Yes	No	PA		No		
+gyrB-PC5-5	PC5	Seedling	6 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC5-6	PC5	Seedling	6 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC5-7	PC5	Seedling	6 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC5-8	PC5	Seedling	6 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC5-9	PC5	Seedling	6 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC7-1	PC7	Seedling	8 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC7-10	PC7	Seedling	8 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC7-11	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-12	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-13	PC7	Seedling	8 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC7-14	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-15	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-16	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-17	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-18	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-19	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-2	PC7	Seedling	8 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC7-20	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-21	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-22	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-23	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-24	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-3	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-4	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-5	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-6	PC7	Seedling	8 strains	Total	Yes	No	PN	Yes	Yes		
+gyrB-PC7-7	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-8	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PC7-9	PC7	Seedling	8 strains	Total	Yes	No	PA	Yes	Yes		
+gyrB-PT1	PT	Seedling	Control	Total	Yes	yes			No		
+gyrB-PT10	PT	Seedling	Control	Total	Yes	No	PN		Yes		
+gyrB-PT11	PT	Seedling	Control	Total	Yes	No	PN		Yes		
+gyrB-PT12	PT	Seedling	Control	Total	Yes	No	PN		Yes		
+gyrB-PT13	PT	Seedling	Control	Total	Yes	No	PN		Yes		
+gyrB-PT14	PT	Seedling	Control	Total	Yes	yes			No		
+gyrB-PT15	PT	Seedling	Control	Total	Yes	yes			No		
+gyrB-PT2	PT	Seedling	Control	Total	Yes	No	PN		Yes		
+gyrB-PT3	PT	Seedling	Control	Total	Yes	No	PN		Yes		
+gyrB-PT4	PT	Seedling	Control	Total	Yes	No	PN		Yes		
+gyrB-PT5	PT	Seedling	Control	Total	Yes	No	PA		Yes		
+gyrB-PT6	PT	Seedling	Control	Total	Yes	No	PN		Yes		
+gyrB-PT8	PT	Seedling	Control	Total	Yes	No	PN		Yes		
+gyrB-PT9	PT	Seedling	Control	Total	Yes	No	PN		Yes		
+gyrB-PX-1	PX	Seedling	Xcc	Total	Yes	No	PA				
+gyrB-PX-10	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-12	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-13	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-14	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-15	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-16	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-18	PX	Seedling	Xcc	Total	Yes	No	PA				
+gyrB-PX-19	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-2	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-20	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-21	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-22	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-23	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-24	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-26	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-27	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-28	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-29	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-3	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-30	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-4	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-5	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-6	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-7	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-8	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-PX-9	PX	Seedling	Xcc	Total	Yes	No	PN				
+gyrB-T-T10	T-T	Seedling	Control	Tapis	Yes	No	PN				
+gyrB-T-T12	T-T	Seedling	Control	Tapis	Yes	No	PN				
+gyrB-T-T13	T-T	Seedling	Control	Tapis	Yes	No	PN				
+gyrB-T-T5	T-T	Seedling	Control	Tapis	Yes	No	PA				
+gyrB-T-T6	T-T	Seedling	Control	Tapis	Yes	No	PN				
+gyrB-TC11-12	TC11	Seedling	12 strains	Tapis	Yes	No	PN				
+gyrB-TC11-16	TC11	Seedling	12 strains	Tapis	Yes	No	PA				
+gyrB-TC11-2	TC11	Seedling	12 strains	Tapis	Yes	No	PN				
+gyrB-TC11-24	TC11	Seedling	12 strains	Tapis	Yes	No	PN				
+gyrB-TC11-6	TC11	Seedling	12 strains	Tapis	Yes	No	PA				
+gyrB-TC11-9	TC11	Seedling	12 strains	Tapis	Yes	No	PA				
+gyrB-TC5-14	TC5	Seedling	6 strains	Tapis	Yes	No	PA				
+gyrB-TC5-17	TC5	Seedling	6 strains	Tapis	Yes	No	PA				
+gyrB-TC5-20	TC5	Seedling	6 strains	Tapis	Yes	No	PA				
+gyrB-TC5-22	TC5	Seedling	6 strains	Tapis	Yes	No	PA				
+gyrB-TC5-5	TC5	Seedling	6 strains	Tapis	Yes	No	PN				
+gyrB-TC5-9	TC5	Seedling	6 strains	Tapis	Yes	No	PN				
+gyrB-TC7-11	TC7	Seedling	8 strains	Tapis	Yes	No	PA				
+gyrB-TC7-15	TC7	Seedling	8 strains	Tapis	Yes	No	PA				
+gyrB-TC7-23	TC7	Seedling	8 strains	Tapis	Yes	No	PA				
+gyrB-TC7-24	TC7	Seedling	8 strains	Tapis	Yes	No	PA				
+gyrB-TC7-3	TC7	Seedling	8 strains	Tapis	Yes	No	PA				
+gyrB-TC7-8	TC7	Seedling	8 strains	Tapis	Yes	No	PA				
+gyrB-TX-15	TX	Seedling	Xcc	Tapis	Yes	No	PN				
+gyrB-TX-20	TX	Seedling	Xcc	Tapis	Yes	No	PN				
+gyrB-TX-24	TX	Seedling	Xcc	Tapis	Yes	No	PN				
+gyrB-TX-30	TX	Seedling	Xcc	Tapis	Yes	No	PN				
+gyrB-TX-5	TX	Seedling	Xcc	Tapis	Yes	No	PN				
+gyrB-TX-9	TX	Seedling	Xcc	Tapis	Yes	No	PN				
