@@ -497,7 +497,7 @@ ASV_SC <- subset(dataframe_taxo_gyrB2, SynCom == "yes")
 #### Colors used in graphs
 ```{r}
 tax_colors <-  c(
-                 "Erwinia cancerogenus"="purple",
+                 "Enterobacter cancerogenus"="purple",
                  "Erwinia persicina"="#bc5090", 
                  "Paenibacillus sp"= "#ff7c43", 
                  "Pantoea agglomerans"="#216fd2",
@@ -536,7 +536,7 @@ head(gyrB_abrel)
 data_SC=merge(x=gyrB_abrel,y=meta,by.x="Sample_ID",by.y="Sample_ID",all.x = TRUE,all.y = TRUE)
 data_SC=merge(x=data_SC,y=dataframe_taxo_gyrB2,by.x="ASV",by.y="ASV",all.x = TRUE,all.y = TRUE, na.rm=TRUE)
 
-data_SC$Strains <- factor(data_SC$Strains, labels =  c("Other taxa", "Erwinia cancerogenus" ,       "Erwinia persicina"   ,        "Paenibacillus sp"        ,    "Pantoea agglomerans"       ,  "Plantibacter sp"         ,    "Pseudomonas fluorescens 1",   "Pseudomonas fluorescens 2" , "Pseudomonas fluorescens 3" ,  "Pseudomonas fluorescens 4"  , "Pseudomonas viridiflava"  ,   "Stenotrophomonas rhizophila", "Xanthomonas campestris"))
+data_SC$Strains <- factor(data_SC$Strains, labels =  c("Other taxa", "Enterobacter cancerogenus" ,       "Erwinia persicina"   ,        "Paenibacillus sp"        ,    "Pantoea agglomerans"       ,  "Plantibacter sp"         ,    "Pseudomonas fluorescens 1",   "Pseudomonas fluorescens 2" , "Pseudomonas fluorescens 3" ,  "Pseudomonas fluorescens 4"  , "Pseudomonas viridiflava"  ,   "Stenotrophomonas rhizophila", "Xanthomonas campestris"))
 
 
 #rename sample-type
@@ -643,7 +643,44 @@ library(ggpubr)
 plot <- ggarrange(plot_control, plot_SC6, plot_SC8, plot_SC12, ncol=1, nrow=4, common.legend = TRUE, legend = "right")
 ggsave("plot.png" , width = 40, height = 40, units = "cm")
 ```
+# Figure S3 - taxonomic composition of control seedlings
+```{r}
+#Keep only control seedlings
+physeq_gyrB_seedling <- subset_samples(physeq_gyrB, Sample_type == "Seedling")
+physeq_gyrB_seedling <- subset_samples(physeq_gyrB_seedling, Condition == "Control")
+physeq_gyrB_seedling <- filter_taxa(physeq_gyrB_seedling,function(x) sum (x)>10, TRUE)
+physeq_gyrB_seedling
 
+#Turn all OTUs into species counts
+glom16S <- tax_glom(physeq_gyrB_seedling, taxrank = 'Species')
+glom16S # should list # taxa as # Species
+glom16S2 = transform_sample_counts(glom16S, function(x) x / sum(x) )
+glom16S2
+
+data_glom16S<- psmelt(glom16S2) # create dataframe from phyloseq object
+data_glom16S$Species <- as.character(data_glom16S$Species) #convert to character
+
+#simple way to rename Species with < 1% abundance
+data_glom_16S3=data_glom16S
+data_glom_16S3$Species[data_glom_16S3$Abundance < 0.01] <- "Other"
+
+library(stringr)
+data_glom_16S3$Species <- str_replace(data_glom_16S3$Species, "_", " ")
+data_glom_16S3$Species <- str_replace(data_glom_16S3$Species, "unclassified", "spp")
+data_glom_16S3$Species <- str_replace(data_glom_16S3$Species, "spp unclassified", "Unclassified")
+
+#Count # Species to set color palette
+Count = length(unique(data_glom_16S3$Species))
+Count
+```
+
+```{r}
+tax_colors_16S_core <-  c('Aeromicrobium spp'='#ffbb94','Agrobacterium tumefaciens_complex'='#b29e54' ,'Duganella spp'='darkblue', 'Erwinia persicina'='lightgreen','Shigella spp'='lightblue' ,'Klebsiella cf.'='#7E1717', 'Herbaspirillum lusitanum'='#547dae','Nocardioides spp'='#F6E6C2' ,'Pseudolabrys spp'='#c05805','Pseudarthrobacter spp'='#9CA777', 'Variovorax boronicumulans'= "#f4cc95", "Pseudomonas putida"="#CD6688", "Paenibacillus spp"="red", "Pantoea agglomerans"="orange", "Stenotrophomonas rhizophila"="yellow", "Pseudomonas viridiflava"="#90639f", "Sphingomonas spp"="#cf7773","Xanthomonas campestris"="pink","Other"="black", "Xanthomonas arboricola"="#FFAACF", "Unclassified" = "grey", "Herminiimonas spp"="darkgreen", "Massilia spp"="#F11A7B" )
+
+Figure S3 <- ggplot(data=data_glom_16S3, aes(x=Abundance, y=Sample_ID, fill=Species))+ geom_bar(aes(), stat="identity", position="stack") +
+theme(legend.position="bottom",legend.justification="left") + theme_classic()+ theme(axis.title = element_text(color="black", size=12, face="bold"))+ theme(axis.text = element_text(color="black", size=11, face="bold"))+ theme(legend.text = element_text(color="black", size=11, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold")) + theme(strip.background = element_rect(fill = "#f0eeec"),strip.text = element_text(colour = "black", face = "bold"))+ theme(panel.background = element_rect(fill = "white",colour = "black",size = 0.5, linetype="solid"))+ggtitle("Bacteria - gyrB gene")+theme(plot.title = element_text(hjust = 0.5, face="bold"))+theme(strip.text.y = element_text(size=8, angle=0, face = "bold")) +xlab("Relative Abundance")+ylab("Samples")+ scale_x_continuous(labels = scales::percent_format(accuracy = 1))+theme(legend.position = "bottom")+ guides(fill = guide_legend(ncol = 3))+scale_fill_manual(values=tax_colors_16S_core)+scale_fill_manual(values=tax_colors_16S_core)+ scale_y_discrete(labels=c('Seedling 1', 'Seedling 2', 'Seedling 3','Seedling 4', 'Seedling 5', 'Seedling 6','Seedling 7', 'Seedling 8','Seedling 9', 'Seedling 10', 'Seedling 11' ))
+Figure S3
+```
 
 # Figure 4A - Alpha-diversity (Observed richness)
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results="hide"}
@@ -744,7 +781,7 @@ dim(table_rel_abund_long_meta2)
 ```
 
 
-# Figure 5: Transmission
+# Figure 5 & 6: Transmission
 ```{r}
 ##Keep only inoculated ASVs
 table_rel_abund_long_meta2_strain=subset(table_rel_abund_long_meta2, SynCom=="yes")
@@ -755,7 +792,7 @@ library(Rmisc)
 library(ggplot2)
 grouped_stat_slope_rich=summarySE(table_rel_abund_long_meta2_strain, measurevar=c("Relative_Abundance"),groupvars=c("Condition","Sample_type", "Strains"), na.rm = TRUE)
 ```
-# Figure 5C
+# Figure 6B
 ```{r}
 #slop plot by strains - seed vs seedling - without controls - with standard errors
 seedVSseedlings_rich=grouped_stat_slope_rich[grouped_stat_slope_rich$Sample_type!="Inoculum",]
@@ -826,7 +863,7 @@ plot_strains_fitness
 ```
 
 
-# Figure 5D Ratio abundance Seedling / Seed
+# Figure 6B Ratio abundance Seedling / Seed
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 PS_run2_rich_no0=transform_sample_counts(physeq_OTU, function(x) x+1 )
 PS_run2_rich_no0relative=transform_sample_counts(PS_run2_rich_no0, function(x) x/sum(x)*100)
@@ -864,32 +901,137 @@ ALL_data_seed_seedlings_rich_nocontrol$Condition<-ordered(ALL_data_seed_seedling
 
 plot_strains_fitness=ggplot(ALL_data_seed_seedlings_rich_nocontrol,aes(x=log10(fitness),y=Strains,color=Condition))+geom_point(size=5)+scale_color_manual(values=treatment_colors)+theme_classic()+theme(text = element_text(size = 20))+guides(fill=guide_legend(ncol=1))+ylab("Strains")+xlab("log10(Relative abundance ratio Seedling / Seed)")+geom_vline(xintercept = 0)
 plot_strains_fitness
-#write.csv(ALL_data_seed_seedlings_rich_nocontrol, "SynCom_radis_strain_fitness.csv")
 ```
 
 
-# Figure 6 Effect on germination and seedling phenotypes
+# Figure 7 Effect on germination and seedling phenotypes
 ```{r}
 pheno=read.table("Phenotype_Syncom_strain.txt", header = T, sep = "\t")
 head(pheno)
 dim(pheno)
 
 ```
-## Graph Figure 6 phenotype
+## Graph Figure 7 phenotype
 ```{r}
 pheno$Phenotype<-ordered(pheno$Phenotype, levels=c("Non Germinated","Abnormal", "Normal"))
 
 pheno$Condition<-ordered(pheno$Condition, levels=c("6 strains", "8 strains", "12 strains","Enterobacter cancerogenus","Erwinia persicina","Paenibacillus sp", "Pantoea agglomerans","Plantibacter sp","Pseudomonas fluorescens 1", "Pseudomonas fluorescens 2","Pseudomonas fluorescens 3","Pseudomonas fluorescens 4","Pseudomonas viridiflava","Stenotrophomonas rhizophila","Xanthomonas campestris", "Control"))
 	
 library(ggplot2)
-Figure6=ggplot(pheno, aes(x=Condition, y=Frequency, fill=Phenotype)) + 
+Figure7=ggplot(pheno, aes(x=Condition, y=Frequency, fill=Phenotype)) + 
   geom_bar(position = "stack", stat="identity") + ylab("Frequency of phenotype")+xlab("Condition")+scale_fill_manual(values=c("darkred","#E69F00","#41AB5D"))+ theme(axis.title = element_text(color="black", size=12, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))+ scale_y_continuous(labels = scales::percent_format(accuracy = 1))+ theme_classic()	+ theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))+ coord_flip()+ theme(axis.title = element_text(color="black", size=14, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))+facet_grid(Type~., scales  = "free", space = "free")+ theme(strip.text.y = element_text(size=9, face = "bold")) + theme(legend.position = c(-0.26, 0.09)) + theme(legend.background = element_rect(fill="white", size=0.5,linetype="solid", colour ="black"))
-Figure6
+Figure7
 ```
 
-# Figure 7- SynCom effect on phenotype
+### Stats on seedling phenotype using Chi square and Fisher test for small sampling size - normal vs abnormal
+```{r warning=FALSE}
+library(reshape2)
+#transform to wide format
+pheno_wide <- dcast(pheno, Phenotype ~ Condition, value.var="Count")
+head(pheno_wide)
+pheno_wide_abnormal=subset(pheno_wide, Phenotype!="Non Germinated")
 
-# Figure 7 effect of phenotype on microbiota structure
+library(dplyr)
+pheno_wide_abnormal2=pheno_wide_abnormal %>%
+  select(Control, `Xanthomonas campestris`)
+chisq.test(pheno_wide_abnormal2)$expected
+chisq.test(pheno_wide_abnormal2, correct=FALSE)
+fisher.test(pheno_wide_abnormal2)
+
+pheno_wide_abnormal3=pheno_wide_abnormal %>%
+  select(Control, `Stenotrophomonas rhizophila`)
+chisq.test(pheno_wide_abnormal3)$expected
+chisq.test(pheno_wide_abnormal3, correct=FALSE)
+fisher.test(pheno_wide_abnormal3)
+
+pheno_wide_abnormal4=pheno_wide_abnormal %>%
+  select(Control, `Pseudomonas viridiflava`)
+chisq.test(pheno_wide_abnormal4)$expected
+chisq.test(pheno_wide_abnormal4, correct=FALSE)
+fisher.test(pheno_wide_abnormal4) #significant P<0.001
+
+pheno_wide_abnormal5=pheno_wide_abnormal %>%
+  select(Control, `Pseudomonas fluorescens 4`)
+chisq.test(pheno_wide_abnormal5)$expected
+chisq.test(pheno_wide_abnormal5, correct=FALSE)
+fisher.test(pheno_wide_abnormal5)
+
+pheno_wide_abnormal6=pheno_wide_abnormal %>%
+  select(Control, `Pseudomonas fluorescens 3`)
+chisq.test(pheno_wide_abnormal6)$expected
+chisq.test(pheno_wide_abnormal6, correct=FALSE)
+fisher.test(pheno_wide_abnormal6)
+
+pheno_wide_abnormal7=pheno_wide_abnormal %>%
+  select(Control, `Pseudomonas fluorescens 2`)
+chisq.test(pheno_wide_abnormal7)$expected
+chisq.test(pheno_wide_abnormal7, correct=FALSE)
+fisher.test(pheno_wide_abnormal7)
+
+pheno_wide_abnormal8=pheno_wide_abnormal %>%
+  select(Control, `Pseudomonas fluorescens 1`)
+chisq.test(pheno_wide_abnormal8)$expected
+chisq.test(pheno_wide_abnormal8, correct=FALSE)
+fisher.test(pheno_wide_abnormal8)
+
+pheno_wide_abnormal9=pheno_wide_abnormal %>%
+  select(Control, `Plantibacter sp`)
+chisq.test(pheno_wide_abnormal9)$expected
+chisq.test(pheno_wide_abnormal9, correct=FALSE)
+fisher.test(pheno_wide_abnormal9)
+
+pheno_wide_abnormal10=pheno_wide_abnormal %>%
+  select(Control, `Pantoea agglomerans`)
+chisq.test(pheno_wide_abnormal10)$expected
+chisq.test(pheno_wide_abnormal10, correct=FALSE)
+fisher.test(pheno_wide_abnormal10)
+
+pheno_wide_abnormal11=pheno_wide_abnormal %>%
+  select(Control, `Paenibacillus sp`)
+chisq.test(pheno_wide_abnormal11)$expected
+chisq.test(pheno_wide_abnormal11, correct=FALSE)
+fisher.test(pheno_wide_abnormal11)#significant P<0.001
+
+pheno_wide_abnormal12=pheno_wide_abnormal %>%
+  select(Control, `Erwinia persicina`)
+chisq.test(pheno_wide_abnormal12)$expected
+chisq.test(pheno_wide_abnormal12, correct=FALSE)
+fisher.test(pheno_wide_abnormal12)
+
+pheno_wide_abnormal13=pheno_wide_abnormal %>%
+  select(Control, `Enterobacter cancerogenus`)
+chisq.test(pheno_wide_abnormal13)$expected
+chisq.test(pheno_wide_abnormal13, correct=FALSE)
+fisher.test(pheno_wide_abnormal13)
+
+pheno_wide_abnormal14=pheno_wide_abnormal %>%
+  select(Control, `Enterobacter cancerogenus`)
+chisq.test(pheno_wide_abnormal14)$expected
+chisq.test(pheno_wide_abnormal14, correct=FALSE)
+fisher.test(pheno_wide_abnormal14)
+
+pheno_wide_abnormal15=pheno_wide_abnormal %>%
+  select(Control, `6 strains`)
+chisq.test(pheno_wide_abnormal15)$expected
+chisq.test(pheno_wide_abnormal15, correct=FALSE)
+fisher.test(pheno_wide_abnormal15)#significant P<0.001
+
+pheno_wide_abnormal16=pheno_wide_abnormal %>%
+  select(Control, `8 strains`)
+chisq.test(pheno_wide_abnormal16)$expected
+chisq.test(pheno_wide_abnormal16, correct=FALSE)
+fisher.test(pheno_wide_abnormal16)#significant P<0.001
+
+pheno_wide_abnormal17=pheno_wide_abnormal %>%
+  select(Control, `12 strains`)
+chisq.test(pheno_wide_abnormal17)$expected
+chisq.test(pheno_wide_abnormal17, correct=FALSE)
+fisher.test(pheno_wide_abnormal17)#significant P=0.003
+```
+
+# Figure 8- SynCom effect on phenotype
+
+# Figure 8 effect of phenotype on microbiota structure
 ```{r warning=FALSE}
 ##subset seedling to look at seedling type effect
 SV_16S_use1_seedling=subset(SV_16S_use1, Sample_type=="Seedling")
@@ -917,14 +1059,14 @@ stressplot(NMDS2)
 NMDSsites2=scores(NMDS2, display="sites")
 SV_16S_use1_seedlings_nocontrols=cbind(SV_16S_use1_seedlings_nocontrols,NMDSsites2)
 ```
-# Figure 7A
+# Figure 8A
 ```{r warning=FALSE}
 library(ggplot2)
 SV_16S_use1_seedlings_nocontrols$Condition<-ordered(SV_16S_use1_seedlings_nocontrols$Condition, levels=c( "6 strains", "8 strains", "12 strains"))
-p1=ggplot(data=SV_16S_use1_seedlings_nocontrols, aes(NMDS1, NMDS2,
+Figure8A=ggplot(data=SV_16S_use1_seedlings_nocontrols, aes(NMDS1, NMDS2,
 color=Seedling_type))+geom_point(size=3)+xlab("NMDS1")+ylab("NMDS2")+facet_wrap(~Condition, scales ="free", ncol = 2)+theme_classic()+ theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=10, face="bold"))+ theme(axis.text = element_text(color="black", size=8, face="bold"))+ labs(color = "Seedling Phenotype")+ theme(strip.text.x = element_text(size=10, face = "bold")) +
   scale_color_manual(labels = c("Normal", "Abnormal"), values = c("#41AB5D", "#E69F00"))+ theme(legend.position = c(0.65, 0.3))
-p1
+Figure8A
 ```
 
 ```{r}
@@ -942,7 +1084,7 @@ pairwise.adonis(matrix_use2, Alltreatments$Condition)
 
 ```
 
-# Figure 7B rel abund strains in function of seedling type
+# Figure 8B rel abund strains in function of seedling type
 ```{r warning=FALSE}
 table_rel_abund_long_meta2_seedling=subset(table_rel_abund_long_meta2, Sample_type=="Seedling")
 table_rel_abund_long_meta2_seedling=table_rel_abund_long_meta2_seedling[table_rel_abund_long_meta2_seedling$Condition!="Control",]
@@ -951,7 +1093,7 @@ library(ggplot2)
 Diversity_stat <- summarySE(table_rel_abund_long_meta2_seedling, measurevar="Relative_Abundance", groupvars=c("Seedling_type", "Condition", "Strains"), na.rm = TRUE)
 ```
 
-## Figure 7B rel abund strains in function of seedling type - just 12 strains SynCom
+## Figure 8B rel abund strains in function of seedling type - just 12 strains SynCom
 ```{r warning=FALSE}
 table_rel_abund_long_meta2_seedling12strains=table_rel_abund_long_meta2_seedling[table_rel_abund_long_meta2_seedling$Condition=="12 strains",]
 dim(table_rel_abund_long_meta2_seedling12strains)
@@ -962,20 +1104,17 @@ dim(table_rel_abund_long_meta2_seedling12strains)
 
 table_rel_abund_long_meta2_seedling12strains$Seedling_type<-ordered(table_rel_abund_long_meta2_seedling12strains$Seedling_type, levels=c("PN","PA"))
 
-p3=ggplot(data=table_rel_abund_long_meta2_seedling12strains, aes(x=Strains, y=Relative_Abundance, fill=Seedling_type)) +geom_boxplot(outlier.shape = NA) + theme_classic()+xlab("Strains")+ylab("ASV Relative Abundance")+ theme(axis.title = element_text(color="black", size=12, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))+ scale_y_log10(labels = scales::percent_format(accuracy = 0.1))+ theme(axis.text.x = element_text(angle = 45, hjust = 1))	+ theme(legend.text = element_text(color="black", size=8, face="bold"))+ theme(legend.title = element_text(color="black", size=10, face="bold"))+ scale_fill_manual(name = "Seedling Phenotype", labels = c("Normal", "Abnormal"), values = c("#41AB5D", "#E69F00"))
-p3
+Figure8B=ggplot(data=table_rel_abund_long_meta2_seedling12strains, aes(x=Strains, y=Relative_Abundance, fill=Seedling_type)) +geom_boxplot(outlier.shape = NA) + theme_classic()+xlab("Strains")+ylab("ASV Relative Abundance")+ theme(axis.title = element_text(color="black", size=12, face="bold"))+ theme(axis.text = element_text(color="black", size=10, face="bold"))+ scale_y_log10(labels = scales::percent_format(accuracy = 0.1))+ theme(axis.text.x = element_text(angle = 45, hjust = 1))	+ theme(legend.text = element_text(color="black", size=8, face="bold"))+ theme(legend.title = element_text(color="black", size=10, face="bold"))+ scale_fill_manual(name = "Seedling Phenotype", labels = c("Normal", "Abnormal"), values = c("#41AB5D", "#E69F00"))
+Figure8B
 ```
 
-
+### stats rel abund in different phenotypes
 ```{r}
-##stats rel abund in different phenotypes
 #choose the strain
 strain=subset(table_rel_abund_long_meta2_seedling12strains, Strains=="Xanthomonas campestris")
 dim(strain)
 ggplot(strain, aes(Relative_Abundance))+geom_histogram(binwidth=0.001)
-```
 
-```{r}
 #Gaussian or Gamma (continuous data)
 library(lme4)
 library(MASS)
@@ -984,9 +1123,7 @@ summary(model.nb)
 #check if model fits the data P>0.05 is good
 1- pchisq(summary(model.nb)$deviance, summary(model.nb)$df.residual)
 plot(model.nb)
-```
 
-```{r}
 ###Estimate P values for main effects and interactions
 library(car)
 Anova(model.nb)
@@ -999,13 +1136,10 @@ library(emmeans)
 warp.emm <- emmeans(model.nb, ~Seedling_type)
 multcomp::cld(warp.emm)
 ```
-
+### stats on all strains
 ```{r}
-#stats on all strains
 ggplot(table_rel_abund_long_meta2_seedling12strains, aes(Relative_Abundance))+geom_histogram(binwidth=0.005)
-```
 
-```{r}
 #Gaussian or Gamma (continuous data)
 library(lme4)
 library(MASS)
@@ -1014,9 +1148,7 @@ summary(model.nb)
 #check if model fits the data P>0.05 is good
 1- pchisq(summary(model.nb)$deviance, summary(model.nb)$df.residual)
 plot(model.nb)
-```
 
-```{r}
 ###Estimate P values for main effects and interactions
 library(car)
 Anova(model.nb)
@@ -1028,6 +1160,127 @@ library(multcompView)
 library(emmeans)
 warp.emm <- emmeans(model.nb, ~Seedling_type|Strains)
 multcomp::cld(warp.emm)
+```
+
+# Supplementary Figure S2 native vs surface disinfected seeds
+
+##Import gyrB dataset with native seeds
+```{r}
+meta2 <- read.table("metadata_syncom_Anne_gyrB.txt", header=TRUE, check.names = FALSE, sep = "\t")
+SV_16S<-read.table("SynCom_Anne_gyrB_SV_tax_filtered_md5_native.txt", header=TRUE, check.names = FALSE, sep = "\t")
+head(SV_16S)
+head(meta2)
+dim(meta2)
+dim(SV_16S)
+SV_16S_use1<-merge(meta2,SV_16S,by="Sample_ID")
+dim(SV_16S_use1)
+head(SV_16S_use1)
+
+##Subset to keep only native and surface disinfected seeds
+SV_16S_use1=subset(SV_16S_use1, Native=="Yes")
+dim(SV_16S_use1)
+
+### Make matrix of just SVs without metadata (needed to make distance matrix for NMDS and stats). Absolutely no metadata should be present, select just the columns with SV names.
+matrix<-SV_16S_use1[c(13:ncol(SV_16S_use1))]
+
+dim(matrix)
+head(matrix)
+
+##Check rarefaction curves
+#determine what is the lowest sequence count in a sample (if not already rarefied). 
+#First column could be sampleID to be displayed on the graph.
+library(vegan)
+raremax <- min(rowSums(matrix))
+raremax
+rar=rarecurve(matrix, step=50, sample = raremax, cex = 0.6, ylab = "ASV richness", label = FALSE)
+
+#create rarefied matrix
+matrix2=rrarefy(matrix, raremax)
+#verify that now we have the same number of sequence per sample (Sample size) across the dataset
+rar=rarecurve(matrix2, step=20, sample = raremax, cex = 0.6)
+
+### Remove rare SVs - less than 20 reads 
+dim(matrix2)
+matrix_use<-matrix2[,colSums(matrix2)>=20]
+dim(matrix_use)
+```
+
+```{r warning=FALSE, results='hide'}
+# 1. Ordination: NMDS with Bray-Curtis distances
+##Prepare an ordination (NMDS) based on Bray-Curtis dissimilarity matrix to analyze the community structure
+library(vegan)
+NMDS <- metaMDS(matrix_use, distance = "bray", trymax = 100, k=3)
+
+# Check if the NMDS is representing correctly the data in 2 dimensions: Stress must be inferior to 0.2 and R2 fit on the stressplot should be high >0.95
+NMDS
+stressplot(NMDS)
+##Extract scores for sites (samples) and add these results as new columns in SV_use1 dataframe with the metadata
+NMDSsites=scores(NMDS, display="sites")
+SV_16S_use1=cbind(SV_16S_use1,NMDSsites)
+```
+
+## Figure S2 panel A 
+```{r warning=FALSE}
+library(ggplot2)
+p1=ggplot(data=SV_16S_use1, aes(NMDS1, NMDS2,
+color=Surface_Sterilization))+geom_point(size=2.5)+theme_classic()+xlab("NMDS1")+ylab("NMDS2")+ theme(legend.text = element_text(color="black", size=10, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold"))	+ theme(axis.title = element_text(color="black", size=10, face="bold"))+ theme(axis.text = element_text(color="black", size=8, face="bold"))+ labs(color = "Surface Sterilization")
+p1
+```
+### Permanova
+```{r warning=FALSE}
+# Permanova - Distance based multivariate analysis of variance
+##Effect of Surface Sterilization
+Alltreatments=SV_16S_use1[c(2:12)] 
+head(Alltreatments)
+#Adonis function in Vegan
+adonis2 <- adonis(matrix_use ~ Surface_Sterilization, method = "bray", permutations = 999, data=Alltreatments)
+adonis2
+```
+
+## Figure S2B - Taxonomic Bargraph at Species level
+```{r}
+library(microbiome)
+##Convert data as phyloseq object
+matrix_16St=t(matrix_use)
+dim(matrix_16St)
+taxo_16S2 <- read.table(file="Subset1-2_All_studies_merged_gyrB-rep-seqs-FINAL-filtered-taxonomy-final.tsv", sep='\t', header=TRUE,check.names=FALSE,row.names=1) 
+dim(taxo_16S2)
+taxo_16S2=as.matrix(taxo_16S2)
+TAXO_16S = tax_table(taxo_16S2)
+OTU_16S = otu_table(matrix_16St, taxa_are_rows = TRUE)
+meta_16S=SV_16S_use1[c(1:8)]
+META_16S=sample_data(meta_16S)
+physeq_16S = phyloseq(OTU_16S, TAXO_16S,META_16S)
+physeq_16S
+
+#Turn all OTUs into class (or phylum or order level) counts
+glom16S <- tax_glom(physeq_16S, taxrank = 'Species')
+glom16S # should list # taxa as # species
+glom16S2 = transform_sample_counts(glom16S, function(x) x / sum(x) )
+glom16S2
+
+data_glom16S<- psmelt(glom16S2) # create dataframe from phyloseq object
+data_glom16S$Species <- as.character(data_glom16S$Species) #convert to character
+
+#simple way to rename Species with < 0.1% abundance
+data_glom_16S3=data_glom16S
+data_glom_16S3$Genus[data_glom_16S3$Abundance < 0.001] <- "Other"
+
+library(stringr)
+data_glom_16S3$Species <- str_replace(data_glom_16S3$Species, "_", " ")
+data_glom_16S3$Species <- str_replace(data_glom_16S3$Species, "unclassified", "spp")
+
+#Count # species to set color palette
+Count = length(unique(data_glom_16S3$Species))
+Count
+```
+
+```{r}
+tax_colors_16S_core <-  c('Achromobacter spp'='#ffbb94','Agrobacterium tumefaciens'='#b29e54' ,'Asticcacaulis benevestitus'='#B9F3E4', 'Bordetella spp'='#547dae','Cutibacterium acnes'='lightblue' ,'Pseudomonas fluorescens'='#6554AF', 'Erwinia persicina'='lightgreen','Plantibacter spp'='#F6E6C2' ,'Pseudolabrys spp'='#c05805','Serratia plymuthica'='red', 'Saccharibacillus spp'= "#f4cc95", "Pseudomonas koreensis"="#461959", "Massilia"="#d4e79c", "Pantoea agglomerans"="orange", "Stenotrophomonas spp"="yellow", "Pseudomonas viridiflava"="#90639f", "Rhizobium spp"="#4f6457", "Sphingomonas spp"="#cf7773","Xanthomonas campestris"="pink","Other"="black", "Xanthomonas arboricola"="#FFAACF" )
+
+FigureS2B <- ggplot(data=data_glom_16S3, aes(x=Abundance, y=Sample_ID, fill=Species))+ geom_bar(aes(), stat="identity", position="stack") +
+theme(legend.position="bottom",legend.justification="left") + theme_classic()+ theme(axis.title = element_text(color="black", size=12, face="bold"))+ theme(axis.text = element_text(color="black", size=11, face="bold"))+ theme(legend.text = element_text(color="black", size=11, face="bold"))+ theme(legend.title = element_text(color="black", size=12, face="bold")) + theme(strip.background = element_rect(fill = "#f0eeec"),strip.text = element_text(colour = "black", face = "bold"))+ theme(panel.background = element_rect(fill = "white",colour = "black",size = 0.5, linetype="solid"))+ggtitle("Bacteria - gyrB gene")+theme(plot.title = element_text(hjust = 0.5, face="bold"))+theme(strip.text.y = element_text(size=8, angle=0, face = "bold")) +xlab("Relative Abundance")+ylab("Samples")+ scale_x_continuous(labels = scales::percent_format(accuracy = 1))+theme(legend.position = "bottom")+ scale_y_discrete(labels=c('Surface-sterilized 1', 'Surface-sterilized 2', 'Surface-sterilized 3','Native 1', 'Native 2', 'Native 3' ))+scale_fill_manual(values=tax_colors_16S_core)+ guides(fill = guide_legend(ncol = 3))
+FigureS2B
 ```
 
 
